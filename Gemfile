@@ -12,11 +12,13 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "figaro"
+gem 'prawn'
+gem 'image_processing'
 
+# gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
-# gem 'mini_magick', '~> 4.8'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
