@@ -27,9 +27,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.get_avatar(@user)
-    @user.get_qrcode(@user)
-    @user.get_grass(@user)
 
     respond_to do |format|
       if @user.save

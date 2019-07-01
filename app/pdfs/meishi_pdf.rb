@@ -37,11 +37,11 @@ class MeishiPDF < Prawn::Document
 
   def draw_qrcode(user)
     qrcode_path = ActiveStorage::Blob.service.path_for(user.qrcode.key)
-    image(qrcode_path, width: 60, height: 60, at: [115, 205])
+    image(qrcode_path, width: 70, height: 70, at: [115, 205])
   end
 
   def draw_grass(user)
     grass_path = ActiveStorage::Blob.service.path_for(user.grass.key)
-    image(grass_path, at: [195, 225])
+    image(grass_path, at: [205, 225])
   end
 end
