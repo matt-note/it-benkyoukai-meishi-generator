@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "figaro"
 gem 'prawn'
 gem 'image_processing'
+gem 'friendly_id', '~> 5.2.4'
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby

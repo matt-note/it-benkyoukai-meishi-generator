@@ -5,5 +5,8 @@ class User < ApplicationRecord
 
   after_create UserCallbacks.new
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   validates :name, presence: true
 end
