@@ -61,10 +61,10 @@ class UsersController < ApplicationController
 
   private
     def set_user
-      @user = User.find(params[:id])
+      @user = User.friendly.find(params[:id])
     end
 
     def user_params
-      params.require(:user).permit(:name, :avatar)
+      params.require(:user).permit(:login_name, :avatar)
     end
 end
