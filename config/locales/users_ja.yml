@@ -4,5 +4,5 @@ ja:
       user: "ユーザー"
     attributes:
       user:
-        login_name: GitHubログイン名
+        login: GitHubログイン名
         twitter_name: Twitterアカウント

@@ -8,5 +8,5 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  validates :name, presence: true
+  validates :login, presence: true
 end
