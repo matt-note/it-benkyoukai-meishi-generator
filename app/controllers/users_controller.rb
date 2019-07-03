@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: '名刺デザインを作成できました。' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -65,6 +65,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:login_name, :avatar)
+      params.require(:user).permit(:login_name, :twitter_name, :avatar)
     end
 end
