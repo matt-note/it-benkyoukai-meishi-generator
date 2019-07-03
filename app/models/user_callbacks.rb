@@ -6,14 +6,9 @@ class UserCallbacks
   end
 
   private
-
-    def confirm_user(user)
-
-    end
-    # begin-resuce 処理を後で書く。
     def get_avatar(user)
       processed = ImageProcessing::MiniMagick
-        .source("https://github.com/#{user.login_name}.png")
+        .source("https://github.com/#{user.login}.png")
         .density(350)
         .resize_to_limit(460, 460)
         .call
@@ -23,7 +18,7 @@ class UserCallbacks
 
     def get_qrcode(user)
       processed = ImageProcessing::MiniMagick
-        .source("https://api.qrserver.com/v1/create-qr-code/?size=460x460&data=https://github.com/#{user.login_name}")
+        .source("https://api.qrserver.com/v1/create-qr-code/?size=460x460&data=https://github.com/#{user.login}")
         .density(350)
         .resize_to_limit(70, 70)
         .call
@@ -36,7 +31,7 @@ class UserCallbacks
       left_top = "+685+16"
 
       processed = ImageProcessing::MiniMagick
-        .source("https://grass-graph.moshimo.works/images/#{user.login_name}.png")
+        .source("https://grass-graph.moshimo.works/images/#{user.login}.png")
         .crop("#{size}#{left_top}")
         .density(350)
         .call
