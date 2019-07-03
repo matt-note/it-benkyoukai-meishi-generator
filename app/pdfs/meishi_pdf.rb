@@ -5,6 +5,7 @@ class MeishiPDF < Prawn::Document
       margin: [0,0,0,0]
     )
 
+    # 表面
     draw_tonbo
     image Rails.root.join("app/assets/images/github.png"), width: 18, height: 18, at: [212, 170]
 
@@ -26,22 +27,23 @@ class MeishiPDF < Prawn::Document
     draw_grass(user)
   end
 
-  def draw_tonbo
-    image Rails.root.join("app/assets/images/tonbo.jpg")
-  end
+  private
+    def draw_tonbo
+      image Rails.root.join("app/assets/images/tonbo.jpg")
+    end
 
-  def draw_avatar(user)
-    avatar_path = ActiveStorage::Blob.service.path_for(user.avatar.key)
-    image(avatar_path, width: 80, height: 80, at: [115, 215])
-  end
+    def draw_avatar(user)
+      avatar_path = ActiveStorage::Blob.service.path_for(user.avatar.key)
+      image(avatar_path, width: 80, height: 80, at: [115, 215])
+    end
 
-  def draw_qrcode(user)
-    qrcode_path = ActiveStorage::Blob.service.path_for(user.qrcode.key)
-    image(qrcode_path, width: 70, height: 70, at: [115, 205])
-  end
+    def draw_qrcode(user)
+      qrcode_path = ActiveStorage::Blob.service.path_for(user.qrcode.key)
+      image(qrcode_path, width: 70, height: 70, at: [115, 205])
+    end
 
-  def draw_grass(user)
-    grass_path = ActiveStorage::Blob.service.path_for(user.grass.key)
-    image(grass_path, at: [205, 225])
-  end
+    def draw_grass(user)
+      grass_path = ActiveStorage::Blob.service.path_for(user.grass.key)
+      image(grass_path, at: [205, 225])
+    end
 end
