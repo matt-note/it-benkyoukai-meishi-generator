@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        login_name: GitHubログイン名
+        twitter_name: Twitterアカウント
