@@ -27,22 +27,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    return_value = confirm_user(@user)
 
-    if return_value.nil?
-      redirect_to new_user_url, notice: "GitHubログイン名を見つけられませんでした。"
-    else
-      json = JSON.parse(return_value)
-      set_name(@user, json)
-
-      respond_to do |format|
-        if @user.save
-          format.html { redirect_to @user, notice: '名刺デザインを作成できました。' }
-          format.json { render :show, status: :created, location: @user }
-        else
-          format.html { render :new }
-          format.json { render json: @user.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: '名刺デザインを作成できました。' }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -72,24 +64,14 @@ class UsersController < ApplicationController
       @user = User.friendly.find(params[:id])
     end
 
-    def confirm_user(user)
-      begin
-        open("https://api.github.com/users/#{user.login}").read
-      rescue OpenURI::HTTPError => error
-        puts error.message
-        return nil
-      end
-    end
-
-    def set_name(user, json)
-      if json["name"].nil?
-        user.name = user.login
-      else
-        user.name = json["name"]
-      end
-    end
-
     def user_params
-      params.require(:user).permit(:login, :name, :twitter_name, :avatar)
+      params.require(:user).permit(
+        :name,
+        :login,
+        :twitter_account,
+        :avatar,
+        :github_qrcode,
+        :twitter_qrcode
+      )
     end
 end

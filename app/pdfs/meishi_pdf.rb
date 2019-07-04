@@ -11,13 +11,14 @@ class MeishiPDF < Prawn::Document
     draw_avatar(user)
     draw_name(user)
     draw_login(user)
-    
+    draw_twitter_account(user)
+
     start_new_page
 
     # 裏面
     draw_tonbo
-    draw_qrcode(user)
-    draw_grass(user)
+    draw_github_qrcode(user)
+    draw_twitter_qrcode(user)
   end
 
   private
@@ -46,13 +47,19 @@ class MeishiPDF < Prawn::Document
       end
     end
 
-    def draw_qrcode(user)
-      qrcode_path = ActiveStorage::Blob.service.path_for(user.qrcode.key)
-      image(qrcode_path, width: 70, height: 70, at: [115, 205])
+    def draw_twitter_account(user)
+      font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 18) do
+        draw_text "#{user.login}", at: [235, 130]
+      end
     end
 
-    def draw_grass(user)
-      grass_path = ActiveStorage::Blob.service.path_for(user.grass.key)
-      image(grass_path, at: [205, 225])
+    def draw_github_qrcode(user)
+      github_qrcode_path = ActiveStorage::Blob.service.path_for(user.github_qrcode.key)
+      image(github_qrcode_path, width: 95, height: 95, at: [110, 220])
+    end
+
+    def draw_twitter_qrcode(user)
+      twitter_qrcode_path = ActiveStorage::Blob.service.path_for(user.twitter_qrcode.key)
+      image(twitter_qrcode_path, width: 95, height: 95, at: [230, 220])
     end
 end
