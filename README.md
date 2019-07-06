@@ -1,10 +1,5 @@
 # IT勉強会用 名刺ジェネレーター
 
-## Why?
-<kbd>
-[![Screenshot from 2019-07-06 20-38-03](https://user-images.githubusercontent.com/39484102/60755689-025b7a00-a02e-11e9-8a64-de15cd6ae28b.png)](https://twitter.com/matt59649858/status/1137017607591145472)
-</kbd>
-
 ## What?
 * [IT勉強会用 名刺ジェネレーター] というサービスは、
 * [IT勉強会の懇親会で名刺交換をする時に、会社の名刺では Twitter や GitHub のアカウントが載っておらず、SNSでつながることができない問題] を解決したい
