@@ -12,4 +12,10 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :login, presence: true
   validates :twitter_account, presence: true
+
+  def twitter_account_remove_at
+    twitter_account = self.twitter_account.split("")
+    twitter_account.shift
+    twitter_account.join
+  end
 end

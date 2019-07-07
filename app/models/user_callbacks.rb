@@ -22,7 +22,7 @@ class UserCallbacks
 
     def require_twitter_account(user)
       begin
-        open("https://twitter.com/#{user.twitter_account}")
+        open("https://twitter.com/#{user.twitter_account_remove_at}")
       rescue OpenURI::HTTPError => e
         user.errors.add(:twitter_account, "を見つけらませんでした。")
         puts e.message
@@ -55,9 +55,9 @@ class UserCallbacks
 
     def get_twitter_qrcode(user)
       # テスト用
-      url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://twitter.com/#{user.twitter_account}"
+      url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://twitter.com/#{user.twitter_account_remove_at}"
 
-      # url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
+      # url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account_remove_at}"
       processed = ImageProcessing::MiniMagick
         .source(url)
         .density(350)
