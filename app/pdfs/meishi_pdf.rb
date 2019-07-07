@@ -8,9 +8,11 @@ class MeishiPDF < Prawn::Document
     # 表面
     draw_tonbo
     draw_github_logo
+    draw_twitter_logo
     draw_avatar(user)
     draw_name(user)
     draw_login(user)
+    draw_twitter_account(user)
     draw_twitter_account(user)
 
     start_new_page
@@ -27,7 +29,11 @@ class MeishiPDF < Prawn::Document
     end
 
     def draw_github_logo
-      image Rails.root.join("app/assets/images/github.png"), width: 18, height: 18, at: [212, 170]
+      image Rails.root.join("app/assets/images/github.png"), width: 14, height: 14, at: [212, 174]
+    end
+
+    def draw_twitter_logo
+      image Rails.root.join("app/assets/images/twitter.png"), width: 15, height: 15, at: [212, 152]
     end
 
     def draw_avatar(user)
@@ -36,20 +42,20 @@ class MeishiPDF < Prawn::Document
     end
 
     def draw_name(user)
-      font(Rails.root.join("app/assets/fonts/Roboto-Light.ttf"), size: 23) do
-        draw_text "#{user.name}", at: [210, 186]
+      font(Rails.root.join("app/assets/fonts/Roboto-Light.ttf"), set_font_size(user)) do
+        draw_text "#{user.name}", at: [210, 190]
       end
     end
 
     def draw_login(user)
-      font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 18) do
-        draw_text "#{user.login}", at: [235, 155]
+      font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 10) do
+        draw_text "#{user.login}", at: [230, 163]
       end
     end
 
     def draw_twitter_account(user)
-      font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 18) do
-        draw_text "#{user.login}", at: [235, 130]
+      font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 10) do
+        draw_text "#{user.twitter_account}", at: [230, 141]
       end
     end
 
@@ -61,5 +67,26 @@ class MeishiPDF < Prawn::Document
     def draw_twitter_qrcode(user)
       twitter_qrcode_path = ActiveStorage::Blob.service.path_for(user.twitter_qrcode.key)
       image(twitter_qrcode_path, width: 95, height: 95, at: [230, 220])
+    end
+
+    def set_font_size(user)
+      case user.name.size
+      when 1..10
+        { size: 18 }
+      when 11..12
+        { size: 17 }
+      when 13..14
+        { size: 15 }
+      when 15..16
+        { size: 14 }
+      when 17..18
+        { size: 13 }
+      when 19..20
+        { size: 12 }
+      when 21..22
+        { size: 11 }
+      else
+        { size: 10 }
+      end
     end
 end
