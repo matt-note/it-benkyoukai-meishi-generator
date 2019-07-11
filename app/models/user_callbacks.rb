@@ -5,9 +5,9 @@ class UserCallbacks
   end
 
   def after_create(user)
-    get_avatar(user)
-    get_github_qrcode(user)
-    get_twitter_qrcode(user)
+    fetch_avatar(user)
+    fetch_github_qrcode(user)
+    fetch_twitter_qrcode(user)
   end
 
   private
@@ -29,7 +29,7 @@ class UserCallbacks
       end
     end
 
-    def get_avatar(user)
+    def fetch_avatar(user)
       processed = ImageProcessing::MiniMagick
         .source("https://github.com/#{user.login}.png")
         .density(350)
@@ -39,7 +39,7 @@ class UserCallbacks
       user.avatar.attach(io: processed, filename: "avatar")
     end
 
-    def get_github_qrcode(user)
+    def fetch_github_qrcode(user)
       # テスト用
       url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/#{user.login}"
 
@@ -53,7 +53,7 @@ class UserCallbacks
       user.github_qrcode.attach(io: processed, filename: "github-qrcode")
     end
 
-    def get_twitter_qrcode(user)
+    def fetch_twitter_qrcode(user)
       # テスト用
       url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://twitter.com/#{user.twitter_account_remove_at}"
 
@@ -67,7 +67,7 @@ class UserCallbacks
       user.twitter_qrcode.attach(io: processed, filename: "twitter-qrcode")
     end
 
-    # def get_grass(user)
+    # def fetch_grass(user)
     #   size = "119x107"
     #   left_top = "+685+16"
     #
