@@ -1,32 +1,13 @@
 class UserCallbacks
-  def before_create(user)
-    require_github_login(user)
-    require_twitter_account(user)
-  end
-
   def after_create(user)
-    fetch_avatar(user)
-    fetch_github_qrcode(user)
-    fetch_twitter_qrcode(user)
+    fetch_images(user)
   end
 
   private
-    def require_github_login(user)
-      begin
-        open("https://github.com/#{user.login}")
-      rescue OpenURI::HTTPError => e
-        user.errors.add(:login, "を見つけらませんでした。")
-        puts e.message
-      end
-    end
-
-    def require_twitter_account(user)
-      begin
-        open("https://twitter.com/#{user.twitter_account_remove_at}")
-      rescue OpenURI::HTTPError => e
-        user.errors.add(:twitter_account, "を見つけらませんでした。")
-        puts e.message
-      end
+    def fetch_images(user)
+      fetch_avatar(user)
+      fetch_github_qrcode(user)
+      fetch_twitter_qrcode(user)
     end
 
     def fetch_avatar(user)
