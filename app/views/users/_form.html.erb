@@ -1,4 +1,4 @@
-<%= form_with(model: user, local: true) do |form| %>
+<%= form_with(model: user, local: true, id: "meishi-form") do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -27,4 +27,7 @@
   <div class="actions">
     <%= form.submit "作成する", data: { disable_with: "名刺作成中…" } %>
   </div>
+
+  <div id="loading"></div>
+  <div id="text"></div>
 <% end %>
