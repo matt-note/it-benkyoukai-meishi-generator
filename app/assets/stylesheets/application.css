@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ #loading {
+  position: absolute;
+ 	top: 60%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ }
+
+ #loading img {
+   width: 200px;
+   height: 200px;
+ }
+
+#text {
+  position: absolute;
+ 	top: 80%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
