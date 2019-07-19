@@ -31,7 +31,7 @@ class UserCallbacks
     end
 
     def fetch_twitter_qrcode(user)
-      url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account_remove_at}"
+      url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
       processed = ImageProcessing::MiniMagick
         .source(url)
         .density(350)
