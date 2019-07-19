@@ -1,6 +1,6 @@
-<h1>Editing User</h1>
+<%= render "form", user: @user %>
 
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="mt-4">
+  <%= link_to "名刺完成ページに戻る", @user %> |
+  <%= link_to "名刺作成ページに戻る", root_path %>
+</div>
