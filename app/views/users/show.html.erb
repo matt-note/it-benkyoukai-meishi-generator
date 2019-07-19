@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to user_path(@user, format: "pdf"), class: "btn btn-primary my-4 d-block w-50" do %>
+  名刺を表示する
+<% end %>
+
+<%= link_to "#", class: "btn btn-success d-block mb-3 w-50" do %>
+  ラクスルに入稿する（サンプル）
+<% end %>
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  作成したPDFファイルはラクスルにそのまま入稿できます。
 </p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
-
 <hr>
-
-<%= link_to "名刺（PDF）を表示する", user_path(@user, format: "pdf") %>
+<%= link_to '編集する', edit_user_path(@user) %> |
+<%= link_to '戻る', root_path %>

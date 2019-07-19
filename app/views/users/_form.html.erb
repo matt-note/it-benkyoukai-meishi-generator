@@ -10,17 +10,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>（必須）
+    <%= form.label :name %><span class="text-danger">*</span>
     <%= form.text_field :name, placeholder: "The Octocat" %>
   </div>
 
   <div class="field">
-    <%= form.label :login %>（必須）
+    <%= form.label :login %><span class="text-danger">*</span>
     <%= form.text_field :login, placeholder: "octocat" %>
   </div>
 
   <div class="field">
-    <%= form.label :twitter_account %>（必須）
+    <%= form.label :twitter_account %><span class="text-danger">*</span>
     <%= form.text_field :twitter_account, placeholder: "@monatheoctocat" %>
   </div>
 
