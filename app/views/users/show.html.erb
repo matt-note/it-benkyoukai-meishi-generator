@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to user_path(@user, format: "pdf"), class: "btn btn-primary my-4 d-block w-50" do %>
+<%= link_to user_path(@user, format: "pdf"), class: "btn btn-primary my-4 d-block w-50", target: "_blank", rel: "noopener" do %>
   名刺を表示する
 <% end %>
 
 <%= link_to "#", class: "btn btn-success d-block mb-3 w-50" do %>
-  ラクスルに入稿する（サンプル）
+  ラクスルに入稿する（サンプルのボタン）
 <% end %>
-<p>
-  作成したPDFファイルはラクスルにそのまま入稿できます。
-</p>
+
+<div class="mt-4">
+  <p>作成したPDFファイルはラクスルにそのまま入稿できます。<br>ラクスルへの入稿は、パソコンからのみ行うことができます。（
+    <%= link_to "参考リンク", "https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-", target: "_blank", rel: "noopener" %>
+    ）</p>
+</div>
+
 <hr>
-<%= link_to '編集する', edit_user_path(@user) %> |
 <%= link_to '戻る', root_path %>

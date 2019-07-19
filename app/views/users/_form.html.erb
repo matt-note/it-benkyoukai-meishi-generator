@@ -9,18 +9,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :login %><span class="text-danger">*</span>
-    <%= form.text_field :login, placeholder: "octocat" %>
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= form.label :login %><span class="text-danger">*</span>
+    </div>
+    <div class="col-md-6" style="margin-left: -10px">
+      <%= form.text_field :login, placeholder: "octocat", class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :twitter_account %><span class="text-danger">*</span>
-    <%= form.text_field :twitter_account, placeholder: "@monatheoctocat" %>
+  <div class="form-group row">
+    <div class="col-md-3 col-form-label">
+      <%= form.label :twitter_account %><span class="text-danger">*</span>
+    </div>
+    <div class="col-md-6">
+      <div class="input-group" style="margin-left: -10px">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <%= form.text_field :twitter_account, placeholder: "octocat", class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit "作成する", data: { disable_with: "名刺作成中…" } %>
+  <div id="submit" class="actions">
+    <%= form.submit "作成する", data: { disable_with: "名刺作成中…" }, class: "btn btn-light border" %>
   </div>
 
   <div id="loading"></div>
