@@ -1,6 +1,7 @@
 class UserCallbacks
   def after_create(user)
     fetch_images(user)
+    fetch_github_name(user)
   end
 
   private
@@ -37,6 +38,29 @@ class UserCallbacks
         .call
 
       user.twitter_qrcode.attach(io: processed, filename: "twitter-qrcode")
+    end
+
+    def fetch_github_name(user)
+      begin
+        url = open("https://api.github.com/users/#{user.login}").read
+      rescue OpenURI::HTTPError
+        errrors.add(:base, "申し訳ありません。GitHubにアクセスできませんでした。")
+        url = nil
+      end
+
+      if url
+        json = JSON.parse(url)
+        set_name(user, json)
+      end
+    end
+
+    def set_name(user, json)
+      if json["name"].nil?
+        user.name = user.login
+      else
+        user.name = json["name"]
+      end
+      user.update(name: user.name)
     end
 
     # def fetch_grass(user)
