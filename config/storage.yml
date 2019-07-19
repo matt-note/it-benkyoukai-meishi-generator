@@ -7,7 +7,7 @@ local:
   root: <%= Rails.root.join("storage") %>
 
 google:
-  service: Cloud Storage
+  service: GCS
   project: it-benkyoukai-meishi
   credentials: <%= ENV["GOOGLE_APPLICATION_CREDENTIALS"].as_json %>
   bucket: it-benkyoukai-meishi
