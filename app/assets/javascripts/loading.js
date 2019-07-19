@@ -5,6 +5,10 @@ document.addEventListener('turbolinks:load', function() {
 
     let submit_button = document.querySelector("input[type='submit']");
     submit_button.addEventListener("click", () => {
+      let error_message = document.getElementById("error_explanation");
+      if (error_message) {
+        error_message.style.display = "none";
+      }
       document.getElementById("loading").appendChild(img);
       document.getElementById("text").innerText = "名刺作成中…";
     })
