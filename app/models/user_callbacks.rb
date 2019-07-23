@@ -12,35 +12,38 @@ class UserCallbacks
     end
 
     def fetch_avatar(user)
-      download_path = Rails.root.join("public/#{user.login}.jpg").to_s
+      download_path = Rails.root.join("tmp/#{user.login}.jpg").to_s
       processed = ImageProcessing::MiniMagick
         .source("https://github.com/#{user.login}.png")
         .density(350)
         .call(destination: download_path)
-      # avatar_image = open("https://github.com/#{user.login}.png")
 
       user.avatar.attach(io: File.open(download_path), filename: "avatar")
       File.delete(download_path)
     end
 
     def fetch_github_qrcode(user)
+      download_path = Rails.root.join("tmp/#{user.login}-github-qrcode.png").to_s
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/github?t=https://github.com/#{user.login}"
       processed = ImageProcessing::MiniMagick
         .source(url)
         .density(350)
-        .call
+        .call(destination: download_path)
 
-      user.github_qrcode.attach(io: processed, filename: "github-qrcode")
+      user.github_qrcode.attach(io: File.open(download_path), filename: "github-qrcode")
+      File.delete(download_path)
     end
 
     def fetch_twitter_qrcode(user)
+      download_path = Rails.root.join("tmp/#{user.login}-twitter-qrcode.png").to_s
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
       processed = ImageProcessing::MiniMagick
         .source(url)
         .density(350)
-        .call
+        .call(destination: download_path)
 
-      user.twitter_qrcode.attach(io: processed, filename: "twitter-qrcode")
+      user.twitter_qrcode.attach(io: File.open(download_path), filename: "twitter-qrcode")
+      File.delete(download_path)
     end
 
     def fetch_github_name(user)
