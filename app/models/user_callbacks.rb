@@ -12,12 +12,15 @@ class UserCallbacks
     end
 
     def fetch_avatar(user)
+      download_path = Rails.root.join("public/#{user.login}.jpg").to_s
       processed = ImageProcessing::MiniMagick
         .source("https://github.com/#{user.login}.png")
         .density(350)
-        .call
+        .call(destination: download_path)
+      # avatar_image = open("https://github.com/#{user.login}.png")
 
-      user.avatar.attach(io: processed, filename: "avatar")
+      user.avatar.attach(io: File.open(download_path), filename: "avatar")
+      File.delete(download_path)
     end
 
     def fetch_github_qrcode(user)
