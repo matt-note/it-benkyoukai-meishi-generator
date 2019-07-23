@@ -110,7 +110,7 @@ ja:
     format: "%{attribute}%{message}"
     messages:
       accepted: を受諾してください
-      blank: を入力してください
+      blank: を入力してください。
       confirmation: と%{attribute}の入力が一致しません
       empty: を入力してください
       equal_to: は%{count}にしてください
@@ -128,9 +128,9 @@ ja:
       odd: は奇数にしてください
       other_than: は%{count}以外の値にしてください
       present: は入力しないでください
-      required: を入力してください
+      required: を入力してください。
       taken: はすでに存在します
-      too_long: は%{count}文字以内で入力してください
+      too_long: は%{count}文字以内で入力してください。
       too_short: は%{count}文字以上で入力してください
       wrong_length: は%{count}文字で入力してください
     template:

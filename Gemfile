@@ -17,6 +17,7 @@ gem 'image_processing'
 gem 'friendly_id', '~> 5.2.4'
 gem 'webpacker', require: false
 gem "google-cloud-storage", require: false
+gem "jquery-rails"
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby

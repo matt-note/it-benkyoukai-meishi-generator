@@ -1,15 +1,16 @@
 <%= form_with(model: user, local: true, id: "meishi-form") do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation">
-      <ul>
+    <div id="error_explanation" class="alert alert-dismissible alert-danger">
+      <ul class="m-0">
       <% user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
+      <button type="button" class="close" data-dismiss="alert">×</button>
     </div>
   <% end %>
 
-  <div class="form-group row">
+  <div class="form-group row mt-4">
     <div class="col-md-3 col-form-label">
       <%= form.label :login %><span class="text-danger">*</span>
     </div>
