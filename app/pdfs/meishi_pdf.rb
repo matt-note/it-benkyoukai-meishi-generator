@@ -11,6 +11,7 @@ class MeishiPDF < Prawn::Document
     draw_twitter_logo
     draw_avatar(user)
     draw_name(user)
+    draw_position(user)
     draw_login(user)
     draw_twitter_account(user)
     draw_twitter_account(user)
@@ -25,68 +26,53 @@ class MeishiPDF < Prawn::Document
 
   private
     def draw_tonbo
-      image Rails.root.join("app/assets/images/tonbo.jpg")
+      image(Rails.root.join("app/assets/images/tonbo.jpg"))
     end
 
     def draw_github_logo
-      image Rails.root.join("app/assets/images/github.png"), width: 14, height: 14, at: [212, 174]
+      image(Rails.root.join("app/assets/images/github.png"), width: 14, height: 14, at: [222, 160])
     end
 
     def draw_twitter_logo
-      image Rails.root.join("app/assets/images/twitter.png"), width: 15, height: 15, at: [212, 152]
+      image(Rails.root.join("app/assets/images/twitter.png"), width: 15, height: 15, at: [222, 142])
     end
 
     def draw_avatar(user)
       avatar_path = ActiveStorage::Blob.service.path_for(user.avatar.key)
-      image(avatar_path, width: 80, height: 80, at: [115, 215])
+      image(avatar_path, width: 70, height: 70, at: [124, 196])
     end
 
     def draw_name(user)
-      font(Rails.root.join("app/assets/fonts/Roboto-Light.ttf"), set_font_size(user)) do
-        draw_text "#{user.name}", at: [210, 190]
+      font(Rails.root.join("app/assets/fonts/Roboto-Regular.ttf"), size: 10) do
+        draw_text("#{user.name}", at: [220, 205])
+      end
+    end
+
+    def draw_position(user)
+      font(Rails.root.join("app/assets/fonts/RobotoSlab-Thin.ttf"), size: 9) do
+        draw_text("Programmer", at: [220, 191])
       end
     end
 
     def draw_login(user)
       font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 10) do
-        draw_text "#{user.login}", at: [230, 163]
+        draw_text("#{user.login}", at: [240, 149])
       end
     end
 
     def draw_twitter_account(user)
       font(Rails.root.join("app/assets/fonts/Roboto-Thin.ttf"), size: 10) do
-        draw_text "#{user.twitter_account}", at: [230, 141]
+        draw_text("#{user.twitter_account}", at: [240, 131])
       end
     end
 
     def draw_github_qrcode(user)
       github_qrcode_path = ActiveStorage::Blob.service.path_for(user.github_qrcode.key)
-      image(github_qrcode_path, width: 95, height: 95, at: [110, 220])
+      image(github_qrcode_path, width: 80, height: 80, at: [130, 210])
     end
 
     def draw_twitter_qrcode(user)
       twitter_qrcode_path = ActiveStorage::Blob.service.path_for(user.twitter_qrcode.key)
-      image(twitter_qrcode_path, width: 95, height: 95, at: [230, 220])
-    end
-
-    def set_font_size(user)
-      case user.name.size
-      when 1..10
-        { size: 18 }
-      when 11..12
-        { size: 17 }
-      when 13..14
-        { size: 15 }
-      when 15..16
-        { size: 14 }
-      when 17..18
-        { size: 13 }
-      when 19..20
-        { size: 12 }
-      when 21..22
-        { size: 11 }
-      else
-        { size: 10 }
-      end
+      image(twitter_qrcode_path, width: 80, height: 80, at: [240, 210])
     end
 end
