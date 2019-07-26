@@ -13,16 +13,13 @@ class UserCallbacks
 
     def fetch_avatar(user)
       download_path = Rails.root.join("tmp/#{user.login}.jpg").to_s
-      url = "https://github.com/#{user.login}.png"
+      url = "https://github.com/#{user.login}.png?size=210"
 
       Down.download(url, destination: download_path)
       ImageProcessing::MiniMagick
         .source(File.open(download_path))
         .density(350)
         .call(destination: download_path)
-
-      user.avatar.attach(io: File.open(download_path), filename: "avatar")
-      File.delete(download_path)
     end
 
     def fetch_github_qrcode(user)
@@ -34,9 +31,6 @@ class UserCallbacks
         .source(File.open(download_path))
         .density(350)
         .call(destination: download_path)
-
-      user.github_qrcode.attach(io: File.open(download_path), filename: "github-qrcode")
-      File.delete(download_path)
     end
 
     def fetch_twitter_qrcode(user)
@@ -48,9 +42,6 @@ class UserCallbacks
         .source(File.open(download_path))
         .density(350)
         .call(destination: download_path)
-
-      user.twitter_qrcode.attach(io: File.open(download_path), filename: "twitter-qrcode")
-      File.delete(download_path)
     end
 
     def fetch_github_name(user)
