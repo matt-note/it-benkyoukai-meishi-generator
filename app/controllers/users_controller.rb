@@ -1,18 +1,20 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[show]
-
   def index
     redirect_to root_url
   end
 
   def show
+    @user = User.friendly.find(params[:id])
     respond_to do |format|
       format.html
       format.pdf do
-        meishi = MeishiPDF.new(@user)
-        send_data meishi.render,
+        send_data(MeishiPDF.new(@user).render,
                   filename: "meishi.pdf",
-                  type: "application/pdf"
+                  type: "application/pdf")
+
+        File.delete(Rails.root.join("tmp/#{@user.login}.jpg").to_s)
+        File.delete(Rails.root.join("tmp/#{@user.login}-github-qrcode.png").to_s)
+        File.delete(Rails.root.join("tmp/#{@user.login}-twitter-qrcode.png").to_s)
       end
     end
   end
@@ -34,17 +36,7 @@ class UsersController < ApplicationController
   end
 
   private
-    def set_user
-      @user = User.friendly.find(params[:id])
-    end
-
     def user_params
-      params.require(:user).permit(
-        :login,
-        :twitter_account,
-        :avatar,
-        :github_qrcode,
-        :twitter_qrcode
-      )
+      params.require(:user).permit(:login,:twitter_account)
     end
 end

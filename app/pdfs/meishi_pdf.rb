@@ -38,7 +38,7 @@ class MeishiPDF < Prawn::Document
     end
 
     def draw_avatar(user)
-      avatar_path = ActiveStorage::Blob.service.path_for(user.avatar.key)
+      avatar_path = Rails.root.join("tmp/#{user.login}.jpg").to_s
       image(avatar_path, width: 70, height: 70, at: [124, 196])
     end
 
@@ -67,12 +67,12 @@ class MeishiPDF < Prawn::Document
     end
 
     def draw_github_qrcode(user)
-      github_qrcode_path = ActiveStorage::Blob.service.path_for(user.github_qrcode.key)
+      github_qrcode_path = Rails.root.join("tmp/#{user.login}-github-qrcode.png").to_s
       image(github_qrcode_path, width: 80, height: 80, at: [130, 210])
     end
 
     def draw_twitter_qrcode(user)
-      twitter_qrcode_path = ActiveStorage::Blob.service.path_for(user.twitter_qrcode.key)
+      twitter_qrcode_path = Rails.root.join("tmp/#{user.login}-twitter-qrcode.png").to_s
       image(twitter_qrcode_path, width: 80, height: 80, at: [240, 210])
     end
 end
