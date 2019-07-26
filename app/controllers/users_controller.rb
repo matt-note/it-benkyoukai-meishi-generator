@@ -12,13 +12,6 @@ class UsersController < ApplicationController
         meishi = MeishiPDF.new(@user)
         send_data meishi.render,
                   filename: "meishi.pdf",
-                  type: "application/pdf",
-                  disposition: "inline"
-      end
-      format.png do
-        meishi = MeishiPDF.new(@user)
-        send_data meishi.render,
-                  filename: "meishi.pdf",
                   type: "application/pdf"
       end
     end
