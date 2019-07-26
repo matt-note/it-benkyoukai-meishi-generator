@@ -65,6 +65,8 @@ GEM
     declarative (0.0.10)
     declarative-option (0.1.0)
     digest-crc (0.4.1)
+    down (4.8.1)
+      addressable (~> 2.5)
     erubi (1.8.0)
     execjs (2.7.0)
     faraday (0.15.4)
@@ -261,6 +263,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
+  down
   figaro
   friendly_id (~> 5.2.4)
   google-cloud-storage
