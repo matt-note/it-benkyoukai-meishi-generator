@@ -46,7 +46,8 @@ class UserCallbacks
 
     def fetch_github_name(user)
       begin
-        url = open("https://api.github.com/users/#{user.login}").read
+        url = open("https://api.github.com/users/#{user.login}",
+                   "Authorization" => "token #{ENV['GITHUB_ACCESS_TOKEN']}").read
       rescue OpenURI::HTTPError
         errrors.add(:base, "申し訳ありません。GitHubにアクセスできませんでした。")
         url = nil
@@ -71,12 +72,10 @@ class UserCallbacks
     #   size = "119x107"
     #   left_top = "+685+16"
     #
-    #   processed = ImageProcessing::MiniMagick
+    #   ImageProcessing::MiniMagick
     #     .source("https://grass-graph.moshimo.works/images/#{user.login}.png")
     #     .crop("#{size}#{left_top}")
     #     .density(350)
     #     .call
-    #
-    #   user.grass.attach(io: processed, filename: "grass")
     # end
 end
