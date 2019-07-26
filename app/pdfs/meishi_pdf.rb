@@ -39,18 +39,18 @@ class MeishiPDF < Prawn::Document
 
     def draw_avatar(user)
       avatar_path = Rails.root.join("tmp/#{user.login}.jpg").to_s
-      image(avatar_path, width: 70, height: 70, at: [124, 196])
+      image(avatar_path, width: 70, height: 70, at: [124, 220])
     end
 
     def draw_name(user)
       font(Rails.root.join("app/assets/fonts/Roboto-Regular.ttf"), size: 10) do
-        draw_text("#{user.name}", at: [220, 205])
+        draw_text("#{user.name}", at: [220, 212])
       end
     end
 
     def draw_position(user)
       font(Rails.root.join("app/assets/fonts/RobotoSlab-Thin.ttf"), size: 9) do
-        draw_text("Programmer", at: [220, 191])
+        draw_text("Programmer", at: [220, 198])
       end
     end
 
