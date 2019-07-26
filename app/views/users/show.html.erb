@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to user_path(@user, format: "pdf"), class: "btn btn-primary my-4 d-block w-50", target: "_blank", rel: "noopener" do %>
+<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-primary my-4 d-block w-50" do %>
   名刺原稿をダウンロードする
 <% end %>
 
-<%= link_to "#", class: "btn btn-success d-block mt-5 mb-3 w-50" do %>
-  ラクスルに入稿する（サンプルのボタン）
+<%= link_to "#", id: "raksul-btn", class: "btn btn-success disabled d-block mt-3 mb-3 w-50" do %>
+  ラクスルに入稿する
 <% end %>
 
 <div class="mt-4 alert alert-success">
