@@ -5,14 +5,24 @@
 <% end %>
 
 <%= link_to "#", id: "raksul-btn", class: "btn btn-success disabled d-block mt-3 mb-3 w-50" do %>
-  ラクスルに入稿する
+  ラクスルに入稿する（審査待ちで使えません）
 <% end %>
 
-<div class="mt-4 alert alert-success">
-  <p class="m-0">作成したPDFファイルはラクスルにそのまま入稿できます。（サンプル用の文章です）<br>ラクスルへの入稿は、パソコンからのみ行うことができます。（
-    <%= link_to "参考リンク", "https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-", target: "_blank", rel: "noopener" %>
-    ）</p>
+<div class="card border-success p-3 mt-4">
+  <p class="m-0">
+    <!-- ここのリンクには、このアプリのFAQへのリンクを張る。（idなどで。）
+         というのは、上のリンクから購入まで至れば、報酬となるが、違うリンクから購入した場合は、報酬とならないと思うため。
+         このページからラクスルへのリンクは、上の「ラクスルに入稿する」ボタンのみにしたい。（FAQなどを作成できたら、修正する。）
+    -->
+    作成したPDFファイルは、ラクスルの「<%= link_to "オペレーターチェック入稿", "https://raksul.com/guide/submit-data/#operator-check", target: "_blank", rel: "noopener" %>」から入稿できます。
+    <br>
+    ラクスルへの入稿は、<%= link_to "パソコンからのみ", "https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-", target: "_blank", rel: "noopener" %>行うことができます。
+  </p>
 </div>
 
+<h3 class="h5 mt-4">入稿結果の例</h3>
+<div class="border-secondary">
+  <img src="https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png" width="680" alt="入稿結果">
+</div>
 <hr>
 <%= link_to '戻る', root_path %>
