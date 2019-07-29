@@ -10,5 +10,11 @@
 * [プログラマーに特化した名刺原稿を作成できて、ラクスルの形式に合わせて原稿を調整する手間が不要] になる事が特徴です。
 
 ### 名刺原稿の例
-![Screenshot from 2019-07-19 18-04-20](https://user-images.githubusercontent.com/39484102/61523631-b78b2a80-aa4f-11e9-8b69-3457e1f854f7.png)
-![Screenshot from 2019-07-19 18-04-36](https://user-images.githubusercontent.com/39484102/61523632-b78b2a80-aa4f-11e9-927b-7d959ec6ba26.png)
+
+表 | 裏
+---- | ----
+<img src="https://user-images.githubusercontent.com/39484102/62019713-117fb300-b1fb-11e9-9727-a54adb448401.png" width="320"/> | <img src="https://user-images.githubusercontent.com/39484102/62019716-13e20d00-b1fb-11e9-9f28-ce125a292ae1.png" width="320"/>
+
+### 入稿結果
+作成したPDFは、ラクスルの**オペレーターチェック入稿**で入稿することができます。
+![Screenshot from 2019-07-28 20-06-05](https://user-images.githubusercontent.com/39484102/62019473-f3fe1980-b1f9-11e9-9c50-b22184aa5630.png)
