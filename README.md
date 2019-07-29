@@ -14,7 +14,7 @@
 <img src="https://user-images.githubusercontent.com/39484102/62019713-117fb300-b1fb-11e9-9727-a54adb448401.png" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/62019716-13e20d00-b1fb-11e9-9f28-ce125a292ae1.png" width="400"/>
 
 ## 入稿結果
-作成したPDFは、ラクスルの**オペレーターチェック入稿**で入稿することができます。<br>
+作成したPDFは、ラクスルの『**オペレーターチェック入稿**』で入稿することができます。 <br>
 <kbd>
 ![Screenshot from 2019-07-28 20-06-05](https://user-images.githubusercontent.com/39484102/62019473-f3fe1980-b1f9-11e9-9c50-b22184aa5630.png)
 </kbd>
@@ -22,6 +22,6 @@
 ## 参考
 以下のものをデザインの参考にしました。
 
-スティーブ・ジョブズの名刺 | Google者の名刺
+スティーブ・ジョブズの名刺 | Google社の名刺
 ---- | ----
-<img src="https://user-images.githubusercontent.com/39484102/61930593-28cf5e00-afb9-11e9-9142-5214e82e73a5.jpg)" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/61933889-ee1df380-afc1-11e9-9cd7-3caf6038ad59.jpg" width="400"/>
+<img src="https://user-images.githubusercontent.com/39484102/61930593-28cf5e00-afb9-11e9-9142-5214e82e73a5.jpg" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/61933889-ee1df380-afc1-11e9-9cd7-3caf6038ad59.jpg" width="400"/>
