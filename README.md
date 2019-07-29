@@ -16,7 +16,7 @@
 ## 入稿結果
 作成したPDFは、ラクスルの『**[オペレーターチェック入稿](https://raksul.com/guide/submit-data/#operator-check)**』で入稿することができます。
 <kbd>
-![Screenshot from 2019-07-28 20-06-05](https://user-images.githubusercontent.com/39484102/62019473-f3fe1980-b1f9-11e9-9c50-b22184aa5630.png)
+![62019473-f3fe1980-b1f9-11e9-9c50-b22184aa5630](https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png)
 </kbd>
 
 ## 参考
