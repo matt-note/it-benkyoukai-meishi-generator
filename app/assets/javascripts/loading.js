@@ -10,7 +10,7 @@ document.addEventListener("turbolinks:load", () => {
         error_message.style.display = "none";
       }
       document.getElementById("loading").appendChild(img);
-      document.getElementById("text").innerText = "名刺作成中…";
+      document.getElementById("text").innerText = "作成中…";
     })
   }
 })

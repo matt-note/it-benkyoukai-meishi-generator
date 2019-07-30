@@ -1,2 +1,50 @@
-<h1>StaticPages#faq</h1>
-<p>Find me in app/views/static_pages/faq.html.erb</p>
+<article class="mb-5">
+  <h2 class="h6 mt-4">FAQ もくじ</h2>
+  <ul class="mt-3">
+    <li><a href="#fetch-data">どのようにデータを取得していますか？</a></li>
+    <li><a href="#font-size">名刺のフォントサイズが違います</a></li>
+    <li><a href="#smart-phone">スマホから入稿できますか？</a></li>
+    <li><a href="#operator-check">どのように入稿したら良いですか？</a></li>
+    <li><a href="#rate-limit">名刺原稿を作成できません</a></li>
+  </ul>
+
+  <h2 id="fetch-data" class="h6 mt-5">どのようにデータを取得していますか？</h2>
+  <p>
+    名刺のアバター画像は、GitHubのアバター画像を使用しています。<br>
+    名刺の名前を変更する場合は、<a href="https://github.com/settings/profile" target="_blank" rel="noopener">GitHubのsettings</a>からNameを設定してください。<br>
+    Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。<br>
+    Nameが25文字以上の場合は、名前が名刺に入りきらない場合があります。
+  </p>
+
+  <h2 id="font-size" class="h6 mt-5">名刺のフォントサイズが違います</h2>
+  <div class="row">
+    <div class="col-md-7">
+      <p>
+        右の名刺を見ると、GitHubアカウントとTwitterアカウントのフォントサイズが違っているように見えます。
+        しかし、両者は同じフォントを使っていて、同じフォントサイズをしています。印刷をすると、両者は同じフォントで同じフォントサイズで印刷されます。
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img class="border" width="240" src="https://user-images.githubusercontent.com/39484102/62113567-ceebd280-b2ef-11e9-9f5b-d7eb013e54e9.png" alt="">
+    </div>
+  </div>
+
+  <h2 id="smart-phone" class="h6 mt-5">スマホから入稿できますか？</h2>
+  <p>
+    スマホからラクスルに入稿することはできません。<br>
+    これはラクスルへの入稿が<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>になっているためです。
+  </p>
+
+  <h2 id="operator-check" class="h6 mt-5">どのように入稿したら良いですか？</h2>
+  <p>
+    作成したPDFの名刺原稿は、ラクスルの<a target="_blank" rel="noopener" href="https://raksul.com/guide/submit-data/#operator-check"><strong>オペーレーターチェック入稿</strong></a>によって入稿することができます。
+  </p>
+
+  <h2 id="rate-limit" class="h6 mt-5">名刺原稿を作成できません</h2>
+  <p>
+    データ取得に使っているGitHub APIの利用制限が1時間あたり5000回までのため、
+    利用制限を超えると、データを取得できずに名刺原稿を作成できなくなります。<br>
+    その際は利用制限が回復するまでお待ちください。
+  </p>
+
+</article>
