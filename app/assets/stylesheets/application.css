@@ -23,13 +23,13 @@
  }
 
  #loading img {
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
  }
 
 #text {
   position: absolute;
- 	top: 75%;
+ 	top: 78%;
  	left: 50%;
  	transform: translate(-50%, -50%);
 }
