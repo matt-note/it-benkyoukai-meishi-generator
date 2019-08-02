@@ -1,22 +1,90 @@
-<p id="notice" class="mt-3"><%= notice %></p>
+<p id="notice" class="mt-4"><%= notice %></p>
 
-<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-primary mt-3 mb-4 d-block w-50" do %>
+<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-primary my-4 d-block w-50" do %>
   名刺原稿をダウンロードする
 <% end %>
 
-<%= link_to "https://raksul.com", id: "raksul-btn", class: "btn btn-success disabled d-block mt-3 mb-3 w-50", target: "_blank", rel: "noopener" do %>
-  ラクスルに入稿する
-<% end %>
-
-<div class="card border-success p-3 mt-4">
-  <p class="m-0">
-    作成したPDFファイルは、ラクスルの「<mark class="p-0">オペレーターチェック入稿</mark>」から入稿できます。
-    <br>
-    ラクスルへの入稿は、<mark class="p-0">パソコンからのみ</mark>行うことができます。
-  </p>
+<div class="accordion-attention card border-success p-3 mt-4">
+  <div data-toggle="collapse" href="#fetch-github-api" style="cursor: pointer">
+    <div id="fetch-data" class="row">
+      <div class="col-sm-11">
+        <p class="m-0">
+          名刺原稿を作成する時のデータ取得は以下のように行っています。
+        </p>
+      </div>
+      <div class="col-sm-1">
+        <svg viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+      </div>
+    </div>
+    <div class="collapse" id="fetch-github-api">
+      <ul class="list-unstyled mt-3 ml-1">
+        <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
+        <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
+        <li>● Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。</li>
+        <li>● Nameが25文字以上の場合は、名前が名刺に入りきらない場合があります。</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<h3 class="h6 mt-5">入稿結果の例</h3>
+<%= link_to "https://raksul.com/businesscard/standard/", id: "raksul-btn", class: "btn btn-success mt-5 w-50", target: "_blank", rel: "noopener" do %>
+  ラクスルに入稿する
+<% end %>
+<div data-toggle="collapse" href="#submit-meishi" style="cursor: pointer"  class="accordion-attention card border-success p-3 mt-4">
+  <div id="submit-attention" class="row">
+    <div class="col-sm-11">
+      <p class="mb-0">
+        入稿時の注意点は以下のようになります。
+      </p>
+    </div>
+    <div class="col-sm-1">
+      <svg viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
+    </div>
+  </div>
+  <div id="submit-meishi" class="collapse mb-0">
+    <ul class="list-unstyled mt-3 ml-1">
+      <li>
+        ● ラクスルへの入稿は、<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>行うことができます。
+      </li>
+      <li>
+        ● ラクスルでは、印刷料を決めた後にPDFを入稿する流れになります。
+      </li>
+      <li>
+        ● 作成したPDFファイルは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/submit-data/#operator-check">オペレーターチェック入稿</a>から入稿できます。
+      </li>
+    </ul>
+  </div>
+</div>
+<h3 class="h5 mt-5">ラクスルへの入稿手順</h3>
+<p class="mt-3">
+  上のボタンからラクスルにアクセスして、商品詳細と料金を選択します。
+  <br>
+  商品詳細ではデフォルトで両面カラー印刷になるため、特にこだわりがない場合は何も設定する必要がありません。
+</p>
+<img width="680" class="border-secondary" src="https://user-images.githubusercontent.com/39484102/62359357-9ba87e00-b551-11e9-8a53-e0e5e2dc6df6.png" alt="商品詳細">
+
+<p class="mt-5">
+  次に料金を選択して、注文を確定します。
+</p>
+<p>
+<img width="680" class="border-secondary p-2" src="https://user-images.githubusercontent.com/39484102/62364467-81c06880-b55c-11e9-98cb-6c1992a4ba4a.png" alt="料金選択">
+
+<p class="mt-5">
+  注文を確定したら、入稿方法の選択で「オペーレーターチェック入稿」を選択します。
+</p>
+<img width="680" class="border-secondary p-2" src="https://user-images.githubusercontent.com/39484102/62367307-3447f980-b564-11e9-80e3-db0f1fb17c16.png" alt="オペーレーターチェック入稿">
+
+<p class="mt-5">
+  PDFを入稿します。
+</p>
+<img width="680" class="border rounded p-2" src="https://user-images.githubusercontent.com/39484102/62372682-0fa74e00-b573-11e9-8878-b442a779e62b.png" alt="PDFを入稿">
+
+<p class="mt-5">オペーレーターチェック入稿が終了すると、PDFが入稿できたことを確認できます。</p>
 <div class="border-secondary">
-  <img class="border" src="https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png" width="680" alt="入稿結果">
+  <img class="border rounded" src="https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png" width="680" alt="入稿結果">
+</div>
+
+<p class="my-5">名刺が届きます。</p>
+<div class="border-secondary">
+  TODO
 </div>
