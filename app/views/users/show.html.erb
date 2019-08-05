@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="collapse" id="fetch-github-api">
-      <ul class="list-unstyled mt-3 ml-1">
+      <ul class="list-unstyled mt-3 ml-1 mb-1">
         <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
         <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
         <li>● Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。</li>
@@ -27,9 +27,10 @@
   </div>
 </div>
 
-<%= link_to "https://raksul.com/businesscard/standard/", id: "raksul-btn", class: "btn btn-success mt-5 w-50", target: "_blank", rel: "noopener" do %>
+<a id="raksul-btn" class="btn btn-success mt-5 w-50" href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3471828&pid=885963751" target="_blank" rel="nofollow noopener"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3471828&pid=885963751" height="1" width="1" border="0">
   ラクスルに入稿する
-<% end %>
+</a>
+
 <div data-toggle="collapse" href="#submit-meishi" style="cursor: pointer"  class="accordion-attention card border-success p-3 mt-4">
   <div id="submit-attention" class="row">
     <div class="col-sm-11">
@@ -47,7 +48,7 @@
         ● ラクスルへの入稿は、<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>行うことができます。
       </li>
       <li>
-        ● ラクスルでは、印刷料を決めた後にPDFを入稿する流れになります。
+        ● ラクスルでは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/how-to-order/">印刷料を決めた後にPDFを入稿</a>する流れになります。
       </li>
       <li>
         ● 作成したPDFファイルは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/submit-data/#operator-check">オペレーターチェック入稿</a>から入稿できます。
@@ -56,23 +57,31 @@
   </div>
 </div>
 <h3 class="h5 mt-5">ラクスルへの入稿手順</h3>
+
 <p class="mt-3">
-  上のボタンからラクスルにアクセスして、商品詳細と料金を選択します。
+  上の「ラクスルに入稿する」ボタンからラクスルにアクセスします。
+  <br>
+  左メニューの「名刺印刷」から「通常サイズ名刺」をクリックします。
+</p>
+<img width="678" class="border rounded" src="https://user-images.githubusercontent.com/39484102/62443004-9a1ac800-b794-11e9-8fdb-2daf28b7812a.png" alt="名刺印刷">
+
+<p class="mt-5">
+  商品詳細と料金を選択します。
   <br>
   商品詳細ではデフォルトで両面カラー印刷になるため、特にこだわりがない場合は何も設定する必要がありません。
 </p>
-<img width="680" class="border-secondary" src="https://user-images.githubusercontent.com/39484102/62359357-9ba87e00-b551-11e9-8a53-e0e5e2dc6df6.png" alt="商品詳細">
+<img width="678" class="border rounded" src="https://user-images.githubusercontent.com/39484102/62359357-9ba87e00-b551-11e9-8a53-e0e5e2dc6df6.png" alt="商品詳細">
 
 <p class="mt-5">
   次に料金を選択して、注文を確定します。
 </p>
 <p>
-<img width="680" class="border-secondary p-2" src="https://user-images.githubusercontent.com/39484102/62364467-81c06880-b55c-11e9-98cb-6c1992a4ba4a.png" alt="料金選択">
+<img width="678" class="border rounded p-2" src="https://user-images.githubusercontent.com/39484102/62364467-81c06880-b55c-11e9-98cb-6c1992a4ba4a.png" alt="料金選択">
 
 <p class="mt-5">
   注文を確定したら、入稿方法の選択で「オペーレーターチェック入稿」を選択します。
 </p>
-<img width="680" class="border-secondary p-2" src="https://user-images.githubusercontent.com/39484102/62367307-3447f980-b564-11e9-80e3-db0f1fb17c16.png" alt="オペーレーターチェック入稿">
+<img width="678" class="border rounded p-2" src="https://user-images.githubusercontent.com/39484102/62367307-3447f980-b564-11e9-80e3-db0f1fb17c16.png" alt="オペーレーターチェック入稿">
 
 <p class="mt-5">
   PDFを入稿します。
@@ -80,11 +89,9 @@
 <img width="680" class="border rounded p-2" src="https://user-images.githubusercontent.com/39484102/62372682-0fa74e00-b573-11e9-8878-b442a779e62b.png" alt="PDFを入稿">
 
 <p class="mt-5">オペーレーターチェック入稿が終了すると、PDFが入稿できたことを確認できます。</p>
-<div class="border-secondary">
-  <img class="border rounded" src="https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png" width="680" alt="入稿結果">
-</div>
+<img class="border rounded" src="https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png" width="680" alt="入稿結果">
 
-<p class="my-5">名刺が届きます。</p>
-<div class="border-secondary">
-  TODO
+<div class="my-5">
+  <p>注文と入金を終えると、数日後に名刺が届きます。</p>
+  <img width="678" class="border rounded" src="https://user-images.githubusercontent.com/39484102/62444560-cd5f5600-b798-11e9-9c05-2f4fa21ac54c.jpg" alt="届いた名刺">
 </div>
