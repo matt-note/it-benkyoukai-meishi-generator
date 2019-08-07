@@ -49,7 +49,7 @@ class UserCallbacks
         url = open("https://api.github.com/users/#{user.login}",
                    "Authorization" => "token #{ENV['GITHUB_ACCESS_TOKEN']}").read
       rescue OpenURI::HTTPError
-        errrors.add(:base, "申し訳ありません。GitHubにアクセスできませんでした。")
+        user.errors.add(:base, "申し訳ありません。GitHubにアクセスできませんでした。")
         url = nil
       end
 
