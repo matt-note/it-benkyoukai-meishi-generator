@@ -74,8 +74,6 @@ GEM
     ffi (1.11.1)
     figaro (1.1.1)
       thor (~> 0.14)
-    friendly_id (5.2.5)
-      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     google-api-client (0.30.6)
@@ -145,6 +143,7 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     os (1.0.1)
     pdf-core (0.7.0)
     pg (1.1.4)
@@ -152,6 +151,8 @@ GEM
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
     public_suffix (3.1.1)
+    public_uid (1.3.1)
+      orm_adapter (~> 0.5)
     puma (3.12.1)
     rack (2.0.7)
     rack-proxy (0.6.5)
@@ -270,7 +271,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   down
   figaro
-  friendly_id (~> 5.2.4)
   google-cloud-storage
   image_processing
   jbuilder (~> 2.5)
@@ -278,6 +278,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   prawn
+  public_uid
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails_real_favicon
