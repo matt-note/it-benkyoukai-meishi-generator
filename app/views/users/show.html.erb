@@ -1,60 +1,41 @@
 <p id="notice" class="mt-4"><%= notice %></p>
 
-<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-primary my-4 d-block w-50" do %>
+<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-info my-4 d-block w-50" do %>
   名刺原稿をダウンロードする
 <% end %>
 
-<div class="accordion-attention card border-success p-3 mt-4">
-  <div data-toggle="collapse" href="#fetch-github-api" style="cursor: pointer">
-    <div id="fetch-data" class="row">
-      <div class="col-sm-11">
-        <p class="m-0">
-          名刺原稿を作成する時のデータ取得は以下のように行っています。
-        </p>
-      </div>
-      <div class="col-sm-1">
-        <svg viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
-      </div>
-    </div>
-    <div class="collapse" id="fetch-github-api">
-      <ul class="list-unstyled mt-3 ml-1 mb-1">
-        <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
-        <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
-        <li>● Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。</li>
-        <li>● Nameが25文字以上の場合は、名前が名刺に入りきらない場合があります。</li>
-      </ul>
-    </div>
-  </div>
+<div class="card border-info p-3 mt-4">
+  <p class="m-0">
+    名刺原稿を作成する時のデータ取得は以下のように行っています。
+  </p>
+
+  <ul class="list-unstyled mt-3 ml-1 mb-1">
+    <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
+    <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
+    <li>● Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。</li>
+    <li>● Nameが25文字以上の場合は、名前が名刺に入りきらない場合があります。</li>
+  </ul>
 </div>
 
 <a id="raksul-btn" class="btn btn-success mt-5 w-50" href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3471828&pid=885963751" target="_blank" rel="nofollow noopener"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3471828&pid=885963751" height="1" width="1" border="0">
   ラクスルに入稿する
 </a>
 
-<div data-toggle="collapse" href="#submit-meishi" style="cursor: pointer"  class="accordion-attention card border-success p-3 mt-4">
-  <div id="submit-attention" class="row">
-    <div class="col-sm-11">
-      <p class="mb-0">
-        入稿時の注意点は以下のようになります。
-      </p>
-    </div>
-    <div class="col-sm-1">
-      <svg viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 864q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
-    </div>
-  </div>
-  <div id="submit-meishi" class="collapse mb-0">
-    <ul class="list-unstyled mt-3 ml-1">
-      <li>
-        ● ラクスルへの入稿は、<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>行うことができます。
-      </li>
-      <li>
-        ● ラクスルでは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/how-to-order/">印刷料を決めた後にPDFを入稿</a>する流れになります。
-      </li>
-      <li>
-        ● 作成したPDFファイルは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/submit-data/#operator-check">オペレーターチェック入稿</a>から入稿できます。
-      </li>
+<div class="accordion-attention card border-success p-3 mt-4">
+  <p class="mb-0">
+    入稿時の注意点は以下のようになります。
+  </p>
+  <ul class="list-unstyled mt-3 ml-1">
+    <li>
+      ● ラクスルへの入稿は、<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>行うことができます。
+    </li>
+    <li>
+      ● ラクスルでは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/how-to-order/">印刷料を決めた後にPDFを入稿</a>する流れになります。
+    </li>
+    <li>
+      ● 作成したPDFファイルは、<a target="_blank" rel="noopener" href="https://raksul.com/guide/submit-data/#operator-check">オペレーターチェック入稿</a>から入稿できます。
+    </li>
     </ul>
-  </div>
 </div>
 <h3 class="h5 mt-5">ラクスルへの入稿手順</h3>
 
