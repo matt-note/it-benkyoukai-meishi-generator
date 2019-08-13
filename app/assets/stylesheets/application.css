@@ -56,7 +56,12 @@
   color: rgba(0,0,0,.5);
 }
 
-.accordion-attention svg {
-  width: 22px;
-  margin-right: auto;
+.border-success {
+  border: 3px #28a745 solid;
+}
+.border-danger {
+  border: 3px #dc3545 solid;
+}
+.border-info {
+  border: 3px #17a2b8 solid;
 }
