@@ -12,7 +12,7 @@ class UserCallbacks
     end
 
     def fetch_avatar(user)
-      download_path = Rails.root.join("tmp/#{user.login}.jpg").to_s
+      download_path = user.avatar_path
       url = "https://github.com/#{user.login}.png?size=210"
 
       Down.download(url, destination: download_path)
@@ -23,7 +23,7 @@ class UserCallbacks
     end
 
     def fetch_github_qrcode(user)
-      download_path = Rails.root.join("tmp/#{user.login}-github-qrcode.png").to_s
+      download_path = user.github_qrcode_path
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/github?t=https://github.com/#{user.login}"
 
       Down.download(url, destination: download_path)
@@ -34,7 +34,7 @@ class UserCallbacks
     end
 
     def fetch_twitter_qrcode(user)
-      download_path = Rails.root.join("tmp/#{user.login}-twitter-qrcode.png").to_s
+      download_path = user.twitter_qrcode_path
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
 
       Down.download(url, destination: download_path)
@@ -67,15 +67,4 @@ class UserCallbacks
       end
       user.update(name: user.name)
     end
-
-    # def fetch_grass(user)
-    #   size = "119x107"
-    #   left_top = "+685+16"
-    #
-    #   ImageProcessing::MiniMagick
-    #     .source("https://grass-graph.moshimo.works/images/#{user.login}.png")
-    #     .crop("#{size}#{left_top}")
-    #     .density(350)
-    #     .call
-    # end
 end

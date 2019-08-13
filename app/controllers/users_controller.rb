@@ -12,9 +12,9 @@ class UsersController < ApplicationController
                   filename: "meishi.pdf",
                   type: "application/pdf")
 
-        File.delete(Rails.root.join("tmp/#{@user.login}.jpg").to_s)
-        File.delete(Rails.root.join("tmp/#{@user.login}-github-qrcode.png").to_s)
-        File.delete(Rails.root.join("tmp/#{@user.login}-twitter-qrcode.png").to_s)
+        File.delete(@user.avatar_path)
+        File.delete(@user.github_qrcode_path)
+        File.delete(@user.twitter_qrcode_path)
       end
     end
   end
