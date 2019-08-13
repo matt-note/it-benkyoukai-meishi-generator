@@ -1,15 +1,13 @@
-<p id="notice" class="mt-4"><%= notice %></p>
-
-<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-info my-4 d-block w-50" do %>
+<%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-info mt-4 d-block w-50" do %>
   名刺原稿をダウンロードする
 <% end %>
 
-<div class="card border-info p-3 mt-4">
+<div class="card border-info p-3 mt-3">
   <p class="m-0">
-    名刺原稿を作成する時のデータ取得は以下のように行っています。
+    作成した名刺原稿のデータ取得は以下のように行っています。
   </p>
 
-  <ul class="list-unstyled mt-3 ml-1 mb-1">
+  <ul class="list-unstyled mt-2 mb-0">
     <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
     <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
     <li>● Nameが設定されていない場合は、GitHubアカウントを名刺の名前として使用します。</li>
@@ -21,11 +19,11 @@
   ラクスルに入稿する
 </a>
 
-<div class="accordion-attention card border-success p-3 mt-4">
+<div class="card border-success p-3 mt-3">
   <p class="mb-0">
     入稿時の注意点は以下のようになります。
   </p>
-  <ul class="list-unstyled mt-3 ml-1">
+  <ul class="list-unstyled mt-2 mb-0">
     <li>
       ● ラクスルへの入稿は、<a target="_blank" rel="noopener" href="https://faq.raksul.com/hc/ja/articles/115000056521-%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%A7%E3%82%82%E6%B3%A8%E6%96%87%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B-">パソコンからのみ</a>行うことができます。
     </li>
