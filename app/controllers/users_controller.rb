@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.friendly.find(params[:id])
+    @user = User.find_by(public_uid: params[:id])
     respond_to do |format|
       format.html
       format.pdf do
