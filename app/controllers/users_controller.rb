@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user }
+        format.html { redirect_to @user, notice: "名刺原稿を作成できました。" }
       else
         format.html { render :new }
       end

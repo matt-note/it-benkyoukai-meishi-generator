@@ -13,7 +13,7 @@ class UserCallbacks
 
     def fetch_avatar(user)
       download_path = user.avatar_path
-      url = "https://github.com/#{user.login}.png?size=210"
+      url = "https://github.com/#{user.login}.png"
 
       Down.download(url, destination: download_path)
       ImageProcessing::MiniMagick
