@@ -1,3 +1,5 @@
+<p id="notice" class="mt-4"><%= notice %></p>
+
 <%= link_to user_path(@user, format: "pdf"), id: "dl-btn", class: "btn btn-info mt-4 d-block w-50" do %>
   名刺原稿をダウンロードする
 <% end %>
@@ -6,7 +8,6 @@
   <p class="m-0">
     作成した名刺原稿のデータ取得は以下のように行っています。
   </p>
-
   <ul class="list-unstyled mt-2 mb-0">
     <li>● 名刺のアバター画像は、GitHubのアバター画像を使用しています。</li>
     <li>● 名刺の名前は<a href="https://github.com/settings/profile" target="_blank" rel="noopener">Public profile</a>のNameの値を使用しています。</li>
