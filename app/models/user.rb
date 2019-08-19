@@ -22,4 +22,12 @@ class User < ApplicationRecord
   def twitter_qrcode_path
     Rails.root.join("tmp/#{login}-twitter-qrcode.png").to_s
   end
+
+  def preview_pdf_path
+    "./tmp/#{public_uid}.pdf"
+  end
+
+  def printable_pdf_path
+    "./tmp/printable-#{public_uid}.pdf"
+  end
 end

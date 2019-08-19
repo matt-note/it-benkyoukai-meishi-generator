@@ -5,16 +5,19 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(public_uid: params[:id])
+
     respond_to do |format|
       format.html
       format.pdf do
-        send_data(MeishiPDF.new(@user).render,
+        send_data(File.read(@user.printable_pdf_path),
                   filename: "meishi.pdf",
                   type: "application/pdf")
 
         File.delete(@user.avatar_path)
         File.delete(@user.github_qrcode_path)
         File.delete(@user.twitter_qrcode_path)
+        File.delete(@user.preview_pdf_path)
+        File.delete(@user.printable_pdf_path)
       end
     end
   end
