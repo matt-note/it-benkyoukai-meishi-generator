@@ -20,7 +20,7 @@ RUN yarn install --only=production
 COPY src/* /app/src/
 
 WORKDIR /workdir
-CMD [ "/app/src/cli.js" ]
+ENTRYPOINT [ "/app/src/cli.js" ]
 
 # wkhtmltopdf 0.12.5
 # RUN apt-get update && apt-get install -y gdebi
