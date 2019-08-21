@@ -48,7 +48,7 @@ class MeishiPDF < Prawn::Document
     end
 
     def draw_job(user)
-      font(Rails.root.join("app/assets/fonts/RobotoSlab-Thin.ttf"), size: 9) do
+      font(Rails.root.join("app/assets/fonts/Roboto-Light.ttf"), size: 9) do
         draw_text("Programmer", at: [220, 200])
       end
     end
