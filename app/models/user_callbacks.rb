@@ -2,7 +2,7 @@ class UserCallbacks
   def after_create(user)
     fetch_images(user)
     fetch_github_name(user)
-    create_printable_pdf(user)
+    # create_printable_pdf(user)
   end
 
   private
@@ -69,9 +69,8 @@ class UserCallbacks
       user.update(name: user.name)
     end
 
-    def create_printable_pdf(user)
-      pdf = MeishiPDF.new(user)
-      pdf.render_file(user.preview_pdf_path)
-      system("docker run -it -v $PWD:/workdir vibranthq/press-ready --input #{user.preview_pdf_path} --output #{user.printable_pdf_path}")
-    end
+    # def create_printable_pdf(user)
+    #   pdf = MeishiPDF.new(user)
+    #   pdf.render_file(user.preview_pdf_path)
+    # end
 end
