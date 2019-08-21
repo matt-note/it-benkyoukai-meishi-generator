@@ -2,7 +2,7 @@ class UserCallbacks
   def after_create(user)
     fetch_images(user)
     fetch_github_name(user)
-    # create_printable_pdf(user)
+    create_printable_pdf(user)
   end
 
   private
@@ -69,8 +69,9 @@ class UserCallbacks
       user.update(name: user.name)
     end
 
-    # def create_printable_pdf(user)
-    #   pdf = MeishiPDF.new(user)
-    #   pdf.render_file(user.preview_pdf_path)
-    # end
+    def create_printable_pdf(user)
+      pdf = MeishiPDF.new(user)
+      pdf.render_file(user.normal_pdf_path)
+      system("node #{Rails.root.join("src/cli.js").to_s} --input #{user.normal_pdf_path} --output #{user.printable_pdf_path}")
+    end
 end
