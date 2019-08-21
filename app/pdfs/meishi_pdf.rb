@@ -26,8 +26,9 @@ class MeishiPDF < Prawn::Document
 
   private
     def stroke_tonbo
-      # 左上
       stroke_color "808080"
+      
+      # 左上
       stroke { line [0, 248], [85, 248] }
       stroke { line [0, 258], [95, 258] }
       stroke { line [85, 343], [85, 248] }
