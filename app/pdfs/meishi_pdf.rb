@@ -6,7 +6,7 @@ class MeishiPDF < Prawn::Document
     )
 
     # 表面
-    draw_tonbo
+    stroke_tonbo
     draw_github_logo
     draw_twitter_logo
     draw_avatar(user)
@@ -19,14 +19,37 @@ class MeishiPDF < Prawn::Document
     start_new_page
 
     # 裏面
-    draw_tonbo
+    stroke_tonbo
     draw_github_qrcode(user)
     draw_twitter_qrcode(user)
   end
 
   private
-    def draw_tonbo
-      image(Rails.root.join("app/assets/images/tonbo.jpg"))
+    def stroke_tonbo
+      # 左上
+      stroke_color "808080"
+      stroke { line [0, 248], [85, 248] }
+      stroke { line [0, 258], [95, 258] }
+      stroke { line [85, 343], [85, 248] }
+      stroke { line [95, 343], [95, 258] }
+
+      # 右上
+      stroke { line [350, 343], [350, 258] }
+      stroke { line [360, 343], [360, 248] }
+      stroke { line [445, 248], [360, 248] }
+      stroke { line [445, 258], [350, 258] }
+
+      # 左下
+      stroke { line [85, 0], [85, 95] }
+      stroke { line [95, 0], [95, 85] }
+      stroke { line [0, 85], [95, 85] }
+      stroke { line [0, 95], [85, 95] }
+
+      # 右下
+      stroke { line [350, 0], [350, 85] }
+      stroke { line [360, 0], [360, 95] }
+      stroke { line [445, 85], [350, 85] }
+      stroke { line [445, 95], [360, 95] }
     end
 
     def draw_github_logo
