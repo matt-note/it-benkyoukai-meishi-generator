@@ -1,7 +1,6 @@
 const fs = require('fs')
 const execa = require('execa')
 const Mustache = require('mustache')
-const debug = require('debug')('press-ready')
 const { join } = require('path')
 const { tmpdir } = require('os')
 
@@ -65,7 +64,6 @@ async function ghostScript(
   // generate pdf with ghostscript
   const args = [...gsOptions, pdfxDefPath, inputPath]
   const command = [gsCommand, args]
-  debug(command)
   try {
     const { stdout, stderr } = await execa(...command)
     return {
