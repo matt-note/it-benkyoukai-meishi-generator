@@ -15,29 +15,39 @@ class UserCallbacks
       download_path = user.avatar_path
       url = "https://github.com/#{user.login}.png"
 
-      Down.download(url, destination: download_path)
-      ImageProcessing::MiniMagick
-        .source(File.open(download_path))
-        .density(350)
-        .call(destination: download_path)
+      begin
+        Down.download(url, destination: download_path)
+      rescue
+        user.errors.add(:base, "申し訳ありません。画像を取得できませんでした。")
+      end
+      convert_image(download_path)
     end
 
     def fetch_github_qrcode(user)
       download_path = user.github_qrcode_path
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/github?t=https://github.com/#{user.login}"
 
-      Down.download(url, destination: download_path)
-      ImageProcessing::MiniMagick
-        .source(File.open(download_path))
-        .density(350)
-        .call(destination: download_path)
+      begin
+        Down.download(url, destination: download_path)
+      rescue
+        user.errors.add(:base, "申し訳ありません。画像を取得できませんでした。")
+      end
+      convert_image(download_path)
     end
 
     def fetch_twitter_qrcode(user)
       download_path = user.twitter_qrcode_path
       url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
 
-      Down.download(url, destination: download_path)
+      begin
+        Down.download(url, destination: download_path)
+      rescue
+        user.errors.add(:base, "申し訳ありません。画像を取得できませんでした。")
+      end
+      convert_image(download_path)
+    end
+
+    def convert_image(download_path)
       ImageProcessing::MiniMagick
         .source(File.open(download_path))
         .density(350)
