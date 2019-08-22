@@ -10,9 +10,5 @@
     "mustache": "^3.0.1",
     "yargs": "^13.3.0"
   },
-  "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "debug": "^4.1.1"
-  }
+  "license": "MIT"
 }
