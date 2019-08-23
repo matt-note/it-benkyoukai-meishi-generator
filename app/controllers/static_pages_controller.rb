@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def faq
+  def privacy
+  end
+
+  def disclaimer
   end
 end
