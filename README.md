@@ -8,21 +8,16 @@
 * [プログラマーに特化した名刺原稿を作成できて、ラクスルの形式に合わせて原稿を調整する手間が不要] になる事が特徴です。
 
 ## 操作方法
-入力欄にGitHubアカウントとTwitterアカウントを入力して、「作成する」ボタンを押します。しばらくすると名刺原稿をダウンロードできます。ダウンロードした名刺原稿は、そのままラクスルに入稿できるフォーマットになっています。
-
-![Peek 2019-08-13 21-35](https://user-images.githubusercontent.com/39484102/62942112-992c0b00-be12-11e9-906b-0095793544b3.gif)
+入力欄にGitHubアカウントとTwitterアカウントを入力して、「作成する」ボタンを押します。しばらくすると名刺原稿をダウンロードできます。ダウンロードした名刺原稿は、ラクスルのスピードチェック入稿から入稿できるフォーマットになっています。
 
 ## 名刺原稿の例
 
 表 | 裏
 ---- | ----
-<img src="https://user-images.githubusercontent.com/39484102/62019713-117fb300-b1fb-11e9-9727-a54adb448401.png" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/62019716-13e20d00-b1fb-11e9-9f28-ce125a292ae1.png" width="400"/>
+<img src="https://user-images.githubusercontent.com/39484102/63570735-19900000-c5b9-11e9-9550-825e7cf573ba.png" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/63570760-2f9dc080-c5b9-11e9-982c-593c027744bd.png" width="400"/>
 
 ## 入稿結果
-作成したPDFは、ラクスルの『**[オペレーターチェック入稿](https://raksul.com/guide/submit-data/#operator-check)**』で入稿することができます。
-<kbd>
-![62019473-f3fe1980-b1f9-11e9-9c50-b22184aa5630](https://user-images.githubusercontent.com/39484102/62063955-dca94580-b266-11e9-95d7-bbfd8c8dc5a4.png)
-</kbd>
+![Screenshot from 2019-08-22 22-41-24](https://user-images.githubusercontent.com/39484102/63570926-9ae79280-c5b9-11e9-8be0-ab8b14a85a49.png)
 
 ## 参考
 以下のものを名刺デザインの参考にしました。
