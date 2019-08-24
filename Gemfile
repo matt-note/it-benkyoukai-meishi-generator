@@ -19,6 +19,7 @@ gem "google-cloud-storage", require: false
 gem "jquery-rails"
 gem "down"
 gem "public_uid"
+gem "meta-tags"
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby
