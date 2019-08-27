@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   def index
     redirect_to root_url
@@ -10,8 +12,8 @@ class UsersController < ApplicationController
       format.html
       format.pdf do
         send_data(MeishiPDF.new(@user).render,
-                  filename: "meishi.pdf",
-                  type: "application/pdf")
+                  filename: 'meishi.pdf',
+                  type: 'application/pdf')
 
         File.delete(@user.avatar_path)
         File.delete(@user.github_qrcode_path)
@@ -29,7 +31,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: "名刺原稿を作成できました。" }
+        format.html { redirect_to @user, notice: '名刺原稿を作成できました。' }
       else
         format.html { render :new }
       end
@@ -37,7 +39,8 @@ class UsersController < ApplicationController
   end
 
   private
-    def user_params
-      params.require(:user).permit(:login,:twitter_account)
-    end
+
+  def user_params
+    params.require(:user).permit(:login, :twitter_account)
+  end
 end
