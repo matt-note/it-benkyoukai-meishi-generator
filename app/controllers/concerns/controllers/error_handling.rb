@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # frozen_string_litera: true
 
 module Controllers
@@ -15,18 +17,19 @@ module Controllers
     end
 
     private
-      def render_500(ex = nil)
-        logger.error ex.message if ex
-        respond_to do |format|
-          format.html { render template: "errors/500", status: 500 }
-        end
-      end
 
-      def render_404(ex = nil)
-        logger.warn ex.message if ex
-        respond_to do |format|
-          format.html { render template: "errors/404", status: 404 }
-        end
+    def render_500(ex = nil)
+      logger.error ex.message if ex
+      respond_to do |format|
+        format.html { render template: 'errors/500', status: 500 }
       end
+    end
+
+    def render_404(ex = nil)
+      logger.warn ex.message if ex
+      respond_to do |format|
+        format.html { render template: 'errors/404', status: 404 }
+      end
+    end
   end
 end
