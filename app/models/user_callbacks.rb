@@ -28,7 +28,7 @@ class UserCallbacks
 
   def fetch_github_qrcode(user)
     download_path = user.github_qrcode_path
-    url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/github?t=https://github.com/#{user.login}"
+    url = "#{ENV['QR_SERVER']}/github?t=https://github.com/#{user.login}"
 
     begin
       Down.download(url, destination: download_path)
@@ -40,7 +40,7 @@ class UserCallbacks
 
   def fetch_twitter_qrcode(user)
     download_path = user.twitter_qrcode_path
-    url = "https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/twitter?t=https://twitter.com/#{user.twitter_account}"
+    url = "#{ENV['QR_SERVER']}/twitter?t=https://twitter.com/#{user.twitter_account}"
 
     begin
       Down.download(url, destination: download_path)
