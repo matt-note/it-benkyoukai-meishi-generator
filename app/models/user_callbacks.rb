@@ -4,6 +4,8 @@ class UserCallbacks
   def after_create(user)
     fetch_images(user)
     fetch_github_name(user)
+    create_printable_pdf(user)
+    delete_images(user)
   end
 
   private
@@ -73,11 +75,24 @@ class UserCallbacks
   end
 
   def set_name(user, json)
-    user.name = if json['name'].nil?
-                  user.login
-                else
-                  json['name']
-                end
+    if json['name'].nil?
+      user.name = user.login
+    else
+      user.name = json['name']
+    end
     user.update(name: user.name)
+  end
+
+  def create_printable_pdf(user)
+    pdf = MeishiPDF.new(user)
+    pdf.render_file(user.normal_pdf_path)
+    system("node #{Rails.root.join("src/cli.js").to_s} --input #{user.normal_pdf_path} --output #{user.printable_pdf_path}")
+  end
+
+  def delete_images(user)
+    File.delete(user.avatar_path)
+    File.delete(user.github_qrcode_path)
+    File.delete(user.twitter_qrcode_path)
+    File.delete(user.normal_pdf_path)
   end
 end

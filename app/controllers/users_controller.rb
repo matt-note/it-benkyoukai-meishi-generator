@@ -11,13 +11,10 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        send_data(MeishiPDF.new(@user).render,
-                  filename: 'meishi.pdf',
-                  type: 'application/pdf')
-
-        File.delete(@user.avatar_path)
-        File.delete(@user.github_qrcode_path)
-        File.delete(@user.twitter_qrcode_path)
+        send_data(File.read(@user.printable_pdf_path),
+                  filename: "meishi.pdf",
+                  type: "application/pdf")
+        File.delete(@user.printable_pdf_path)
       end
     end
   end
