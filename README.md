@@ -14,7 +14,7 @@
 
 表 | 裏
 ---- | ----
-<img src="https://user-images.githubusercontent.com/39484102/63570735-19900000-c5b9-11e9-9550-825e7cf573ba.png" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/63570760-2f9dc080-c5b9-11e9-982c-593c027744bd.png" width="400"/>
+<img src="https://user-images.githubusercontent.com/39484102/63944280-37bf9980-caac-11e9-938d-921a72d96b90.png" width="400"/> | <img src="https://user-images.githubusercontent.com/39484102/63570760-2f9dc080-c5b9-11e9-982c-593c027744bd.png" width="400"/>
 
 ## 入稿結果
 ![63570926-9ae79280-c5b9-11e9-8be0-ab8b14a85a49](https://user-images.githubusercontent.com/39484102/63602388-474d6700-c602-11e9-99a1-47a9cd8540cb.png)
