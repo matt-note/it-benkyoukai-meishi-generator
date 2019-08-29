@@ -8,13 +8,12 @@ class MeishiPDF < Prawn::Document
     )
 
     # 表面
-    draw_github_logo
-    draw_twitter_logo
     draw_avatar(user)
     draw_name(user)
-    draw_job(user)
+    draw_job
+    draw_github_logo
+    draw_twitter_logo
     draw_login(user)
-    draw_twitter_account(user)
     draw_twitter_account(user)
 
     start_new_page
@@ -27,38 +26,38 @@ class MeishiPDF < Prawn::Document
   private
 
   def draw_avatar(user)
-    image(user.avatar_path, width: 70, height: 70, at: [37, 122])
+    image(user.avatar_path, width: 70, height: 70, at: [47, 122])
   end
 
   def draw_name(user)
     font(Rails.root.join('app/assets/fonts/Roboto-Regular.ttf'), size: 10) do
-      draw_text(user.name.to_s, at: [130, 112])
+      draw_text(user.name.to_s, at: [140, 112])
     end
   end
 
-  def draw_job(_user)
+  def draw_job
     font(Rails.root.join('app/assets/fonts/Roboto-Light.ttf'), size: 9) do
-      draw_text('Programmer', at: [130, 100])
+      draw_text('Programmer', at: [140, 100])
     end
   end
 
   def draw_github_logo
-    image(Rails.root.join('app/assets/images/github.png'), width: 13, height: 13, at: [130, 71])
+    image(Rails.root.join('app/assets/images/github.png'), width: 13, height: 13, at: [140, 71])
   end
 
   def draw_twitter_logo
-    image(Rails.root.join('app/assets/images/twitter.png'), width: 14, height: 14, at: [130, 53])
+    image(Rails.root.join('app/assets/images/twitter.png'), width: 14, height: 14, at: [140, 53])
   end
 
   def draw_login(user)
     font(Rails.root.join('app/assets/fonts/Roboto-Light.ttf'), size: 10) do
-      draw_text(user.login.to_s, at: [148, 61])
+      draw_text(user.login.to_s, at: [158, 61])
     end
   end
 
   def draw_twitter_account(user)
     font(Rails.root.join('app/assets/fonts/Roboto-Light.ttf'), size: 10) do
-      draw_text(user.twitter_account.to_s, at: [148, 42])
+      draw_text(user.twitter_account.to_s, at: [158, 42])
     end
   end
 
