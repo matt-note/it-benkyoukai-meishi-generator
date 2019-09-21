@@ -6,7 +6,7 @@ module MetaTagsHelper
       site: 'IT勉強会用 名刺ジェネレーター',
       reverse: true,
       charset: 'utf-8',
-      description: 'ラクスルにそのまま入稿できる「IT勉強会用の名刺原稿（PDF）」を作成するWebサービスです',
+      description: 'ラクスルにそのまま入稿できる「IT勉強会用の名刺原稿（PDF）」を作成・ダウンロードできるWebサービスです。スピードチェック入稿に対応しているので数分で入稿を完了させることができます。',
       viewport: 'width=device-width, initial-scale=1.0',
       og: {
         title: :title,
