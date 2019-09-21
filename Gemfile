@@ -22,6 +22,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', require: false
+gem 'google-analytics-rails'
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby
