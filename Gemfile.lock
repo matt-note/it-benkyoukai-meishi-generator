@@ -83,6 +83,7 @@ GEM
       thor (~> 0.14)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.1)
     google-api-client (0.30.8)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.5, < 0.10.0)
@@ -296,6 +297,7 @@ DEPENDENCIES
   down
   factory_bot_rails
   figaro
+  google-analytics-rails
   google-cloud-storage
   image_processing
   jbuilder (~> 2.5)
