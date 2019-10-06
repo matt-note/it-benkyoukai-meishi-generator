@@ -11,7 +11,7 @@ RSpec.describe UsersController, type: :request do
   end
 
   describe "POST /users" do
-    context "パラメータが妥当な場合" do
+    context "パラメータが妥当な場合", vcr: true do
       params = { user: FactoryBot.attributes_for(:user) }
 
       example "リクエストが成功すること" do
@@ -26,7 +26,7 @@ RSpec.describe UsersController, type: :request do
       end
     end
 
-    context "パラメータが不正な場合" do
+    context "パラメータが不正な場合", vcr: true do
       example "何も入力していない場合はエラーメッセージを表示すること" do
         params = { user: { login: "", twitter_account: "" } }
 

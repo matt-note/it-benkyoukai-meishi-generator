@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://github.com/erquiopyerioquriopqeupfoiasdkldjfkladngvaldvn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Sun, 06 Oct 2019 07:49:05 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 404 Not Found
+      Vary:
+      - X-PJAX
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - has_recent_activity=1; path=/; expires=Sun, 06 Oct 2019 08:49:04 -0000
+      - logged_in=no; domain=.github.com; path=/; expires=Thu, 06 Oct 2039 07:49:04
+        -0000; secure; HttpOnly
+      X-Request-Id:
+      - 94a16df3-361f-4a47-bb83-fb91b77573de
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Expect-Ct:
+      - max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+      Content-Security-Policy:
+      - default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self';
+        img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+      X-Github-Request-Id:
+      - D2E4:7F98:5F3C0D:8C012A:5D999C70
+    body:
+      encoding: ASCII-8BIT
+      string: Not Found
+    http_version: 
+  recorded_at: Sun, 06 Oct 2019 07:49:05 GMT
+- request:
+    method: get
+    uri: https://twitter.com/erquiopyerioquriopqeupfoiasdkldjfkladngvaldvn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '1745'
+      Content-Security-Policy:
+      - default-src 'none'; img-src https://abs.twimg.com https://ssl.google-analytics.com
+        http://www.google-analytics.com; script-src https://abs.twimg.com https://ssl.google-analytics.com
+        https://ajax.googleapis.com http://www.google-analytics.com about:; style-src
+        https://abs.twimg.com https://fonts.googleapis.com 'unsafe-inline'; font-src
+        https://abs.twimg.com https://twitter.com; connect-src 'none'; object-src
+        'none'; media-src 'none'; frame-src 'none'; report-uri https://twitter.com/i/csp_report?a=ORTGK%3D%3D%3D&ro=false
+      Content-Type:
+      - text/html;charset=utf-8
+      Date:
+      - Sun, 06 Oct 2019 07:49:05 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 06 Oct 2019 07:49:05 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_m
+      Set-Cookie:
+      - _twitter_sess=BAh7CSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCCgbC6BtAToMY3NyZl9p%250AZCIlZGZkZWRjYTVjNDZmZTFmNWRjYjJmMWQyYjBmMmU2YWY6B2lkIiUxNTA3%250AYTdjMzVmNmM5OGUwYTI2NTM5MGQxMzFmNzgwYg%253D%253D--3a626c74fc2f14cd56cb3efb75bb3946b858051b;
+        Path=/; Domain=.twitter.com; Secure; HTTPOnly
+      - ct0=e0e2d4605060d90a93bf0306cc668abc; Max-Age=21600; Expires=Sun, 6 Oct 2019
+        13:49:05 GMT; Path=/; Domain=.twitter.com; Secure
+      - fm=0; Max-Age=0; Expires=Sun, 6 Oct 2019 07:49:05 GMT; Path=/; Domain=.twitter.com;
+        Secure; HTTPOnly
+      - guest_id=v1%3A157034814544706020; Max-Age=63072000; Expires=Tue, 5 Oct 2021
+        07:49:05 GMT; Path=/; Domain=.twitter.com
+      - personalization_id="v1_seVo/S1I+CSCQ+fSTgXakA=="; Max-Age=63072000; Expires=Tue,
+        5 Oct 2021 07:49:05 GMT; Path=/; Domain=.twitter.com
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 2bcca501b2d05f309c0416622468c04d
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Response-Time:
+      - '108'
+      X-Transaction:
+      - 00cfd72f001773f1
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      X-Xss-Protection:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PCFET0NUWVBFIGh0bWw+CjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBsYW5nPSJlbiIgeG1sOmxhbmc9ImVuIj4KICA8aGVhZD4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4KICAgIDxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9ImVuLXVzIj4KICAgIDxtZXRhIG5hbWU9InJvYm90cyIgY29udGVudD0ibm9pbmRleCwgbm9mb2xsb3ciPgogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgogICAgPHRpdGxlPlR3aXR0ZXIgLyA/PC90aXRsZT4KICAgIDxsaW5rIGhyZWY9Imh0dHBzOi8vYWJzLnR3aW1nLmNvbS9mYXZpY29ucy9mYXZpY29uLmljbyIgcmVsPSJzaG9ydGN1dCBpY29uIiB0eXBlPSJpbWFnZS94LWljb24iPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2Ficy50d2ltZy5jb20vZXJyb3JzL2Z1bGxzY3JlZW5fZXJyb3JzLTRlMjlhZWNjODliZTZkNTAwOTc5ZTE5YzNiZDcyYWEyLmNzcyI+CiAgPC9oZWFkPgogIDxib2R5PgogICAgPGRpdiBjbGFzcz0iZXJyb3JwYWdlLXRvcGJhciI+CiAgICAgIDxkaXYgY2xhc3M9ImVycm9ycGFnZS1nbG9iYWwtbmF2Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJlcnJvcnBhZ2UtZ2xvYmFsLW5hdi1pbm5lciI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJlcnJvcnBhZ2UtY29udGFpbmVyIj4KICAgICAgICAgICAgPHVsIGNsYXNzPSJlcnJvcnBhZ2UtbmF2Ij4KICAgICAgICAgICAgICA8bGk+CiAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tIj48aW1nIGNsYXNzPSJlcnJvcnBhZ2UtYmlyZCIgc3Jjc2V0PSdodHRwczovL2Ficy50d2ltZy5jb20vZXJyb3JzL2xvZ28yM3gxOS5wbmcgMXgsIGh0dHBzOi8vYWJzLnR3aW1nLmNvbS9lcnJvcnMvbG9nbzIzeDE5QDJ4LnBuZyAyeCcgc3JjPSJodHRwczovL2Ficy50d2ltZy5jb20vZXJyb3JzL2xvZ28yM3gxOS5wbmciIGFsdD0iVHdpdHRlciI+PC9hPgogICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgIDwvdWw+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImVycm9ycGFnZS1wdWxsLXJpZ2h0Ij4KICAgICAgICAgICAgICA8dWwgY2xhc3M9ImVycm9ycGFnZS1uYXYiPgogICAgICAgICAgICAgICAgPGxpPjxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20iIGlkPSJob21lTGluayI+SG9tZSAmcmFycjs8L2E+PC9saT4KICAgICAgICAgICAgICA8L3VsPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdj4KICAgICAgPGRpdiBjbGFzcz0iZXJyb3JwYWdlLWJvZHktY29udGVudCI+CgogICAgICAgICAgPGgxPlNvcnJ5LCB0aGF0IHBhZ2UgZG9lc27igJl0IGV4aXN0ITwvaDE+CiAgICAgICAgICA8cD5Zb3UgY2FuIDxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vc2VhcmNoLWhvbWUiPnNlYXJjaCBUd2l0dGVyPC9hPiB1c2luZyB0aGUgc2VhcmNoIGJveCBiZWxvdyBvciA8YSBocmVmPSJodHRwczovL3R3aXR0ZXIuY29tIj5yZXR1cm4gdG8gdGhlIGhvbWVwYWdlPC9hPi48L3A+CiAgICAgICAgICA8Zm9ybSBjbGFzcz0ic2VhcmNoLTQwNCIgYWN0aW9uPSJodHRwczovL3R3aXR0ZXIuY29tL3NlYXJjaCIgbWV0aG9kPSJnZXQiPgogICAgICAgICAgICA8aW5wdXQgaWQ9InNlYXJjaF9xIiBuYW1lPSJxIiB0eXBlPSJ0ZXh0IiBhcmlhLWxhYmVsPSJTZWFyY2ggcXVlcnkiIHBsYWNlaG9sZGVyPSJTZWFyY2ggZm9yIGEgdG9waWMsIGZ1bGwgbmFtZSwgb3IgQHVzZXJuYW1lIj4KICAgICAgICAgICAgPGlucHV0IGNsYXNzPSJlcnJvcnBhZ2UtYnRuIiBpZD0ic2VhcmNoX3N1Ym1pdCIgdHlwZT0ic3VibWl0IiB2YWx1ZT0iU2VhcmNoIj4KICAgICAgICAgIDwvZm9ybT4KCiAgICAgICAgPGRpdiBjbGFzcz0iZXJyb3JwYWdlLWZvb3RlciI+CiAgICAgICAgICA8dWwgY2xhc3M9ImVycm9ycGFnZS1sYW5ndWFnZXMiPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iYXIiIGRhdGEtZGlyPSJydGwiIGhyZWY9IiMiPtin2YTYudix2KjZitipPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJiZyIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+0JHRitC70LPQsNGA0YHQutC4INC10LfQuNC6PC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJibiIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+4Kas4Ka+4KaC4Kay4Ka+PC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJjYSIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+Q2F0YWzDoDwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iY3MiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPsSMZcWhdGluYTwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iZGEiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkRhbnNrPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJkZSIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+RGV1dHNjaDwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iZWwiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPs6VzrvOu863zr3Ouc66zqw8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9ImVuIiBkYXRhLWRpcj0iIiBocmVmPSIjIj5FbmdsaXNoPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJlbi1nYiIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+RW5nbGlzaCBVSzwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iZXMiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkVzcGHDsW9sPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJmYSIgZGF0YS1kaXI9InJ0bCIgaHJlZj0iIyI+2YHYp9ix2LPbjDwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iZmkiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPlN1b21pPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJmaWwiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkZpbGlwaW5vPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJmciIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+RnJhbsOnYWlzPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJndSIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+4KqX4KuB4Kqc4Kqw4Kq+4Kqk4KuAPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJoZSIgZGF0YS1kaXI9InJ0bCIgaHJlZj0iIyI+16LWtNeR1rDXqNa015nXqjwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iaGkiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPuCkueCkv+CkqOCljeCkpuClgDwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iaHIiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkhydmF0c2tpPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJodSIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+TWFneWFyPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJpZCIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+QmFoYXNhIEluZG9uZXNpYTwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iaXQiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkl0YWxpYW5vPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJqYSIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+5pel5pys6KqePC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJrbiIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+4LKV4LKo4LON4LKo4LKhPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJrbyIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+7ZWc6rWt7Ja0PC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJtciIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+4KSu4KSw4KS+4KSg4KWAPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJtc2EiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPkJhaGFzYSBNZWxheXU8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9Im5sIiBkYXRhLWRpcj0ibHRyIiBocmVmPSIjIj5OZWRlcmxhbmRzPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJubyIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+Tm9yc2s8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9InBsIiBkYXRhLWRpcj0ibHRyIiBocmVmPSIjIj5Qb2xza2k8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9InB0IiBkYXRhLWRpcj0ibHRyIiBocmVmPSIjIj5Qb3J0dWd1w6pzPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJybyIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+Um9tw6JuxIM8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9InJ1IiBkYXRhLWRpcj0ibHRyIiBocmVmPSIjIj7QoNGD0YHRgdC60LjQuTwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0ic2siIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPlNsb3ZlbsSNaW5hPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJzciIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+0KHRgNC/0YHQutC4PC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJzdiIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+U3ZlbnNrYTwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0idGEiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPuCupOCuruCuv+CutOCvjTwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0idGgiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPuC4oOC4suC4qeC4suC5hOC4l+C4ojwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0idHIiIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPlTDvHJrw6dlPC9hPjwvbGk+CgogICAgICAgICAgICAgIDxsaT48YSBkYXRhLWxhbmd1YWdlPSJ1ayIgZGF0YS1kaXI9Imx0ciIgaHJlZj0iIyI+0KPQutGA0LDRl9C90YHRjNC60LAg0LzQvtCy0LA8L2E+PC9saT4KCiAgICAgICAgICAgICAgPGxpPjxhIGRhdGEtbGFuZ3VhZ2U9InZpIiBkYXRhLWRpcj0ibHRyIiBocmVmPSIjIj5UaeG6v25nIFZp4buHdDwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iemgtY24iIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPueugOS9k+S4reaWhzwvYT48L2xpPgoKICAgICAgICAgICAgICA8bGk+PGEgZGF0YS1sYW5ndWFnZT0iemgtdHciIGRhdGEtZGlyPSJsdHIiIGhyZWY9IiMiPue5gemrlOS4reaWhzwvYT48L2xpPgoKICAgICAgICAgIDwvdWw+CiAgICAgICAgICA8dWw+CiAgICAgICAgICAgIDxsaSBkaXI9Imx0ciI+JmNvcHk7IFR3aXR0ZXIgPHNwYW4gaWQ9ImNvcHlyaWdodC15ZWFyIj48L3NwYW4+PC9saT4KICAgICAgICAgICAgPGxpPjxhIGhyZWY9Imh0dHBzOi8vYWJvdXQudHdpdHRlci5jb20vIj5BYm91dDwvYT48L2xpPgogICAgICAgICAgICA8bGk+PGEgaHJlZj0iaHR0cHM6Ly9zdXBwb3J0LnR3aXR0ZXIuY29tLyI+SGVscCBDZW50ZXI8L2E+PC9saT4KICAgICAgICAgICAgPGxpPjxhIGhyZWY9Imh0dHBzOi8vc3RhdHVzLnR3aXR0ZXJzdGF0LnVzLyI+U3RhdHVzPC9hPjwvbGk+CiAgICAgICAgICA8L3VsPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vYWJzLnR3aW1nLmNvbS9lcnJvcnMvNDA0LTE3NGExZjFhNDE0NjViOGU3YjIwNWU5NTUxOTk1MjY3LmpzIj48L3NjcmlwdD4KICA8L2JvZHk+CjwvaHRtbD4K
+    http_version: 
+  recorded_at: Sun, 06 Oct 2019 07:49:05 GMT
+recorded_with: VCR 5.0.0
