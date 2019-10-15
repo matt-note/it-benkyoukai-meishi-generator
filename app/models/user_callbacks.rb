@@ -62,7 +62,7 @@ class UserCallbacks
   def fetch_github_name(user)
     begin
       url = open("https://api.github.com/users/#{user.login}",
-                 'Authorization' => "token #{ENV['GITHUB_ACCESS_TOKEN']}").read
+                 'Authorization' => "token #{ENV['ACCESS_TOKEN']}").read
     rescue OpenURI::HTTPError
       user.errors.add(:base, '申し訳ありません。GitHubにアクセスできませんでした。')
       url = nil

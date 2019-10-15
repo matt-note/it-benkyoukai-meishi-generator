@@ -1,3 +1,5 @@
+![](https://github.com/matt-note/it-benkyoukai-meishi-generator/workflows/rails-ci/badge.svg)
+
 ## IT勉強会用 名刺ジェネレーター
 * [IT勉強会用 名刺ジェネレーター] というサービスは、
 * [IT勉強会の懇親会で名刺交換をする時に、会社の名刺では Twitter や GitHub のアカウントが載っておらず、SNSでつながることができない問題] を解決したい
