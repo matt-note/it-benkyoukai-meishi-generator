@@ -396,7 +396,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - token <%= ENV["ENV["GITHUB_ACCESS_TOKEN"]"] %>
+      - token <%= ENV["ACCESS_TOKEN"] %>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:

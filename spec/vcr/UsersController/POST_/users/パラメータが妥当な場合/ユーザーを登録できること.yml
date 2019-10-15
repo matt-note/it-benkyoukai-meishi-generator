@@ -296,7 +296,7 @@ http_interactions:
   recorded_at: Sun, 06 Oct 2019 07:48:59 GMT
 - request:
     method: get
-    uri: https://us-central1-qrcode-with-logo.cloudfunctions.net/qrcode-with-logo/qr/github?t=https://github.com/matt-note
+    uri: <%= ENV["QR_CODE"] %>/github?t=https://github.com/matt-note
     body:
       encoding: US-ASCII
       string: ''
@@ -396,7 +396,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - token <%= ENV["GITHUB_ACCESS_TOKEN"] %>
+      - token <%= ENV["ACCESS_TOKEN"] %>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
