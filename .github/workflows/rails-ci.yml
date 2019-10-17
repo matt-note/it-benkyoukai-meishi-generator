@@ -18,7 +18,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
@@ -47,7 +46,7 @@ jobs:
           POSTGRES_PASSWORD: postgres
 
       - name: Run rspec
-        run: COVERAGE=true bundle exec rspec  --require rails_helper
+        run: bundle exec rspec
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres
