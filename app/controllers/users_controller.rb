@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(public_uid: params[:id])
+    @user = User.find(params[:id])
 
     respond_to do |format|
       format.html
