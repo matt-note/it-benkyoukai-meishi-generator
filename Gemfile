@@ -15,7 +15,6 @@ gem 'jquery-rails'
 gem 'meta-tags'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'prawn'
-gem 'public_uid'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
 gem 'sass-rails', '~> 5.0'
@@ -23,6 +22,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', require: false
 gem 'google-analytics-rails'
+gem 'upknit'
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'mini_racer', platforms: :ruby

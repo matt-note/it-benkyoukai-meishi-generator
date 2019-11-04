@@ -7,12 +7,6 @@ class User < ApplicationRecord
   validates :twitter_account, presence: true
   validates_with UserValidator
 
-  generate_public_uid generator: PublicUid::Generators::HexStringSecureRandom.new(20)
-
-  def to_param
-    public_uid
-  end
-
   def avatar_path
     Rails.root.join("tmp/#{login}.jpg").to_s
   end
@@ -26,10 +20,10 @@ class User < ApplicationRecord
   end
 
   def normal_pdf_path
-    Rails.root.join("tmp/#{public_uid}.pdf").to_s
+    Rails.root.join("tmp/#{id}.pdf").to_s
   end
 
   def printable_pdf_path
-    Rails.root.join("tmp/printable-#{public_uid}.pdf").to_s
+    Rails.root.join("tmp/printable-#{id}.pdf").to_s
   end
 end

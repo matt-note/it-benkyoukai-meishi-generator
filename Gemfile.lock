@@ -153,7 +153,6 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    orm_adapter (0.5.0)
     os (1.0.1)
     pdf-core (0.7.0)
     pg (1.1.4)
@@ -161,8 +160,6 @@ GEM
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
     public_suffix (3.1.1)
-    public_uid (1.3.1)
-      orm_adapter (~> 0.5)
     puma (3.12.1)
     rack (2.0.7)
     rack-proxy (0.6.5)
@@ -271,6 +268,8 @@ GEM
     uber (0.1.0)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    upknit (0.9.6)
+      rails (~> 5.1)
     vcr (5.0.0)
     web-console (3.7.0)
       actionview (>= 5.0)
@@ -315,7 +314,6 @@ DEPENDENCIES
   meta-tags
   pg (>= 0.18, < 2.0)
   prawn
-  public_uid
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails_real_favicon
@@ -327,6 +325,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  upknit
   vcr
   web-console (>= 3.3.0)
   webdrivers
