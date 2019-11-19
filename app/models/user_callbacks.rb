@@ -86,8 +86,8 @@ class UserCallbacks
   def create_printable_pdf(user)
     pdf = MeishiPDF.new(user)
     pdf.render_file(user.normal_pdf_path)
-    pdf.render_file(user.printable_pdf_path)
-    # system("node #{Rails.root.join("src/cli.js").to_s} --input #{user.normal_pdf_path} --output #{user.printable_pdf_path}")
+    # pdf.render_file(user.printable_pdf_path)
+    system("node #{Rails.root.join("src/cli.js").to_s} --input #{user.normal_pdf_path} --output #{user.printable_pdf_path}")
   end
 
   def delete_images(user)
