@@ -160,7 +160,8 @@ GEM
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
     public_suffix (3.1.1)
-    puma (3.12.1)
+    puma (4.3.12)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -314,7 +315,7 @@ DEPENDENCIES
   meta-tags
   pg (>= 0.18, < 2.0)
   prawn
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.3)
   rails_real_favicon
   rspec-rails
